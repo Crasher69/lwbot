@@ -1,5 +1,5 @@
 // Input 0
-var aa = ["661228372"], c = 12, m = 10, r = ["galopGenetique"], ba = "", v = "offers" + u(r[0]), w = "doAbort" + u(r[0]);
+var aa = ["661228372", "606006511"], c = 12, m = 10, r = ["galopGenetique"], ba = "", v = "offers" + u(r[0]), w = "doAbort" + u(r[0]);
 void 0 == x(w) && (console.log("!!!" + x(w)), y(w, !1));
 "" != x(v) && void 0 != x(v) || y(v, 0);
 var ca = "amunitionEquiped" + u("sautGenetique");
