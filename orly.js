@@ -2338,7 +2338,7 @@ if (/www.lowadi.com\/elevage\/competition\/inscription\?cheval=/.test(window.loc
     setTimeout(competitionInscript,pause3);
     var  pause4 =  pause2 + getRandomPause(mediumPause1*6,mediumPause2*6);
     setTimeout( checkComp,pause4);
-    return; 
+   
 }
 
 function competitionInscript(){
