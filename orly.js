@@ -70,7 +70,7 @@ var lic = false;
 }
 
 
-//------- Переменные -------
+
 
 var walk1 = 'montagne';
 var walk2= 'foret';
@@ -83,7 +83,7 @@ var polJ ='ж';// тоже самое- для девочки
 
 var spec = 'montagne';//специализация кск с общих
 
-var viborksk =  ksk_all;//НАСТРОЙКА , КАКОЙ КСК БЕРЕМ. резерв или с общих: ksk_all-с общий с душем и поилкой,   kskreserv- резерв
+var viborksk =  кскOLL;//НАСТРОЙКА , КАКОЙ КСК БЕРЕМ. резерв или с общих: кскOLL-с общий с душем и поилкой,   кскрезерв- резерв
 
 var dl =1;//НАСТРОЙКА ДЛИТЕЛЬНОТИ КСК:0- на 1 день, 1- на 3 дня
 
@@ -99,9 +99,21 @@ var mol = 360;//НАСТРОЙКА, возраст, когда рожаем по
 
 var centerLocalisation = 'centerLocalisationMontagne'; // centerLocalisationForet или centerLocalisationMontagne
 
-var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
+
 var HayToGive = 12;
 var OatsToGive = 10;
+
+if (typeof e1 !=="undefined"){
+    var enduranceTComplet = e1;
+    var vitesseTComplet = e2;
+    var dressageTComplet = e3;
+    var galopTComplet = e4;
+    var trotTComplet = e5;
+    var sautTComplet = e6;
+
+    var foretComplet = b3;
+    var montagneComplet = b1;
+}
     
 var genetics = ['galopGenetique'];
 var lastParentPage = "";
@@ -195,10 +207,11 @@ if (is_lic()==true) {
                  GeneticsTraining();	  
                 }
             }
+	}
+	else console.log('Ваша лицензия не активна! Для активации сообщите продаву следующую информацию - ID:'+myhash);	
 
-			}
-		else console.log('Ваша лицензия не активна! Для активации сообщите продаву следующую информацию - ID:'+myhash);	
 }
+
 
 function ORProg()
 {
@@ -802,8 +815,10 @@ function loadURL(url){
     oRequest.send(null);
     return oRequest.responseText;
 }
-
-
+function getGenetics(geneticsName){
+    document.getElementById('tab-genetics-title').onclick();
+    return document.getElementById(geneticsName).childNodes[0].nodeValue;
+}
 function getLastParent(){  
     if (lastParentPage === "")
     {
@@ -856,8 +871,11 @@ function getLastParentSexForBirth(){
     console.log("lastParentSexForBirth="+ lastParentSexForBirth);
     return lastParentSexForBirth;      
 }
-
-
+function getLastParentGenetics(geneticsName){
+    var t = getLastParent();
+    var s = t.substring(t.search(geneticsName) + geneticsName.length + 2 );
+    return s.substring(0, s.search('<') );
+}
 //------- Выборка -------
 
 //--------Прогулки-------
@@ -2322,7 +2340,7 @@ if (/www.lowadi.com\/elevage\/competition\/inscription\?cheval=/.test(window.loc
     setTimeout(competitionInscript,pause3);
     var  pause4 =  pause2 + getRandomPause(mediumPause1*6,mediumPause2*6);
     setTimeout( checkComp,pause4);
-   
+    return; 
 }
 
 function competitionInscript(){
@@ -2596,8 +2614,69 @@ function doEatDef(){// Корм по заданным параметрам
     }
 
 }
+function doEatPre(){// Корм по заданному
+    // Если кормим молоком
+    if (document.body.innerHTML.indexOf('boutonAllaiter') !== -1)
+    {
+        var d = document.getElementById('boutonAllaiter');
+       
+            d.click();
+       
+        return;
+    }
+    var subm = false;
+    var d2 = document.getElementById('feeding').innerHTML;
 
+    var hay = hayToGive();      
+    var oats = oatsToGive();
+    //alert('hay' + hay);
+    //alert('oats' + oats);
+    if (hay + oats === 0) return;
+    if (d2.indexOf('толст') !== -1) return;
+    if (d2.indexOf('недостаточный') !== -1) 
+    {
+        hay = 20-hayGiven();
+        oats = 15-oatsGiven();
+    }
+    // Для слайдеров
+    if (d2.indexOf('haySlider') !== -1)
+    {               
+        // Выставляем сено
+        var spans=document.getElementById('haySlider').getElementsByTagName('li');
+        var i = hay;
+        spans[i].className = spans[i].className + " selected";      
+        spans[i].click();
 
+        var hidden=document.getElementById('haySlider-sliderHidden');
+        hidden.setAttribute("value",i);
+        subm=true;
+    }
+
+    // Выставляем зерно, если оно есть
+    if (d2.indexOf('oatsSlider') !== -1)
+    {
+        var spans=document.getElementById('oatsSlider').getElementsByTagName('li');
+        var i =oats;
+        spans[i].className = spans[i].className + " selected";
+        spans[i].click();        
+
+        var hidden=document.getElementById('oatsSlider-sliderHidden');
+        hidden.setAttribute("value",i);
+        subm=true;
+    }
+    if (subm === false)
+    {
+        // Для выпадающих списков
+        if (d2.indexOf('id="feedingHay"') !== -1)
+        {
+            document.getElementById('feedingHay').options[hay].selected = true;
+        }
+        if (d2.indexOf('id="feedingOats"') !== -1)
+        {
+            document.getElementById('feedingOats').options[oats].selected = true;
+        }
+    }  
+}
 function doEatNorm(){// Корм по норме
     // Если кормим молоком
     if (document.body.innerHTML.indexOf('boutonAllaiter') !== -1)
@@ -2823,7 +2902,9 @@ function readCookie (name) {
 function eraseCookie (name) {
     createCookie(name, ";expires: -1");
 }
-
+function getGlobalParameterByName(a){
+    return window[a];
+}
 function getMyParameterByName(x) {
     var res = "";
     try{
@@ -2877,7 +2958,7 @@ if (/www.lowadi.com\/elevage\/chevaux\/centreInscription\?id=/.test(window.locat
    
      viborksk();
 }
-function kskreserv(){
+function кскрезерв(){
  var pause=0;
     pause=pause+getRandomPause(2200,2600);
     setTimeout(eqCenterReg2,pause);
@@ -2929,19 +3010,19 @@ function eqCenterReg4(){
         location.reload();
     }
 }
-function ksk_all(){
+function кскOLL(){
    var pause=0;
     
     pause=pause+getRandomPause(2000,2500);
-    setTimeout(ksk_0,pause);
+    setTimeout(КСК_O,pause);
     var pause1=pause+getRandomPause(2000,2800);
-    setTimeout(ksk_1,pause1);
+    setTimeout(КСК1,pause1);
     var pause2=pause1+getRandomPause(2200,2800);
-    setTimeout(ksk_2,pause2);
+    setTimeout(КСК2,pause2);
   //   var pause3=pause2+getRandomPause(2500,2800);
    // setTimeout(eqCenterReg4,pause3);
 }
-function ksk_0(){
+function КСК_O(){
    document.getElementById('abreuvoir').setAttribute('value','1');//поилка
    document.getElementById('douche').setAttribute('value','1'); //душ
    document.getElementById(spec).setAttribute('value','1'); //спеца
@@ -2950,14 +3031,14 @@ function ksk_0(){
     d[0].click();
   
 }
-function ksk_1(){
+function КСК1(){
     // Сортировка
     var c = document.getElementsByClassName('grid-cell spacer-small-top spacer-small-bottom');
     var d = c[dl ].getElementsByTagName('a');
     var pause1=getRandomPause(1000,1300);
     d[0].click();
 }
-function ksk_2(){
+function КСК2(){
     // Запись в первый
     var c = document.getElementsByClassName('odd highlight');
     var d = c[0].getElementsByTagName('button');
