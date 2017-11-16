@@ -61,14 +61,12 @@ var lic = false;
 
  	for (var h=0; h<l.length; h++)
  		{
- 			if (l[h] === myhash) lic = true;	
+ 			if (l[h] == myhash) lic = true;	
  		}
 		else console.log('ID:'+myhash+' ERROR!');
  return lic;		
  		
 }
-
-
 
 
 //------- Переменные -------
@@ -84,7 +82,7 @@ var polJ ='ж';// тоже самое- для девочки
 
 var spec = 'montagne';//специализация кск с общих
 
-var viborksk =  ksk_ALL;//НАСТРОЙКА , КАКОЙ КСК БЕРЕМ. резерв или с общих: ksk_ALL-с общий с душем и поилкой,   kskreserv- резерв
+var viborksk =  ksk_all;//НАСТРОЙКА , КАКОЙ КСК БЕРЕМ. резерв или с общих: ksk_all-с общий с душем и поилкой,   kskreserv- резерв
 
 var dl =1;//НАСТРОЙКА ДЛИТЕЛЬНОТИ КСК:0- на 1 день, 1- на 3 дня
 
@@ -99,7 +97,7 @@ var nav=0; //докач навов. 0 - да, 1- нет
 var mol = 360;//НАСТРОЙКА, возраст, когда рожаем под молнию,даже если транс- в месяцах. 180=15 лет
 
 var centerLocalisation = 'centerLocalisationMontagne'; // centerLocalisationForet или centerLocalisationMontagne
-var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
+
 
 var HayToGive = 12;
 var OatsToGive = 10;
@@ -122,12 +120,12 @@ var lastParentSex = "";
 var offersToBeDone = 10;
 var offers = "offers" + getMyParameterByName(genetics[0]);
 var doAbort = "doAbort" + getMyParameterByName(genetics[0]);
-if(readCookie (doAbort) === undefined){
+if(readCookie (doAbort) == undefined){
     console.log("!!!"+readCookie (doAbort) );
     createCookie(doAbort,false);
 }
 
-if(readCookie (offers) === "" || readCookie (offers) === undefined ){
+if(readCookie (offers) == "" || readCookie (offers) == undefined ){
     createCookie (offers, 0);
 }
 
@@ -174,20 +172,18 @@ if (/\/marche\/noir\/object\?qName=/.test(window.location.href))
 
 if (/\/elevage\/chevaux\/cheval\?id=/.test(window.location.href))
 {
-	 if (is_lic()===true)
-	{
-		console.log('License:'+myhash);
+if (is_lic()===true) {
          var sante = document.getElementById('sante').textContent;
             if (sante > 80)
             {    
                 if (chevalAge<=6)
                 {
-                  if(chevalSexe === getLastParentSex())
+                  if(chevalSexe == getLastParentSex())
                 {
                      zeus();
                         
                     }   
-                 else  if(chevalNom.indexOf(".") === -1){
+                 else  if(chevalNom.indexOf(".") == -1){
                       
                          eraseCookie(amunitionEquiped);
                         giveName();
@@ -207,13 +203,12 @@ if (/\/elevage\/chevaux\/cheval\?id=/.test(window.location.href))
                 else 
                 {
 				
-                 MyTrain();	  
+                 GeneticsTraining();	  
                 }
-			}
-	}
-else alert('Ваша лицензия не активирована! Для активации сообщите продавцу следующую информацию - ID:'+myhash);	
-}
+            }
 
+			}
+}
 
 function ORProg()
 {
@@ -324,7 +319,7 @@ function ORProg()
 
 
 
-function MyTrain(){ 
+function GeneticsTraining(){ 
     if (chevalAge>16 && chevalAge<=22)
     {
         OatsToGive = 12;
@@ -340,7 +335,7 @@ function MyTrain(){
     }
    
  
-      else if  ((document.getElementsByClassName('action action-style-4 competition-galop action'))[0] === undefined) {
+      else if  ((document.getElementsByClassName('action action-style-4 competition-galop action'))[0] == undefined) {
 
     EquipAmunition(); 
 
@@ -388,14 +383,14 @@ function MyTrain(){
 	
     else 
     {
-        if (chevalSexe === "feminin"){
+        if (chevalSexe == "feminin"){
             BirthProg();
         }
-        else if (chevalSexe === "masculin" && parseInt(readCookie(offers),10) < offersToBeDone){
+        else if (chevalSexe == "masculin" && parseInt(readCookie(offers),10) < offersToBeDone){
             GiveOfferings(5);
    
         }
-        else if (chevalSexe === "masculin" && parseInt(readCookie(offers),10) === offersToBeDone){
+        else if (chevalSexe == "masculin" && parseInt(readCookie(offers),10) == offersToBeDone){
             eraseCookie(offers);
             GoToMother();
         } 
@@ -602,7 +597,7 @@ function GiveOfferings(offerings){
          var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
          var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
         var d2=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
-        if(((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined))&&(parseInt(readCookie(offers),10) === offersToBeDone)))
+        if(((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined))&&(parseInt(readCookie(offers),10) == offersToBeDone)))
        {
              eraseCookie(offers); 
            GoToMother();
@@ -666,7 +661,7 @@ function timeConvert(){
 function BirthProg(){
   
     console.log(doAbort + "=" + readCookie(doAbort));
-    var b =((document.getElementById('alerteVeterinaireContent')!==null) &&( (readCookie(doAbort)===0) || (chevalAge>mol)));
+    var b =((document.getElementById('alerteVeterinaireContent')!==null) &&( (readCookie(doAbort)==0) || (chevalAge>mol)));
     console.log("Условие родить = " + b);
     if(b){ 
      
@@ -680,7 +675,7 @@ function BirthProg(){
             setTimeout( ORProg,pause1);
       
         }    
-	 else if  (nav===0 )
+	 else if  (nav==0 )
     {
        var pause = getRandomPause(shortPause1,shortPause2);
         setTimeout(openReproduction,pause);
@@ -750,7 +745,7 @@ function openReproduction(){
                 console.log("childSexe=" + childSexe);               
                 lParentSex = getLastParentSexForBirth(); 
                 console.log("!!getLastParentSexForBirth=" + getLastParentSexForBirth());
-                if(lParentSex === childSexe){
+                if(lParentSex == childSexe){
                     createCookie(doAbort,1);}
                 else{
                     createCookie(doAbort,0);}
@@ -2051,14 +2046,14 @@ function Train9(trainName){
              var pause1=getRandomPause(shortPause1,shortPause2);   
         setTimeout(function() {train(trainName, 7);},pause1);
         var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
-            setTimeout(f2,pause2);   
+            setTimeout(f2,pause2)   
         }   
          else if (((tT>93)&&( timeConvert() < 600 ))&&((tT>93)&&(en >20)))
         {
              var pause1=getRandomPause(shortPause1,shortPause2);   
         setTimeout(function() {train(trainName, 6);},pause1);
         var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
-            setTimeout(f2,pause2); 
+            setTimeout(f2,pause2) 
         }
         else
         {
@@ -2323,7 +2318,7 @@ function amunition2() {
         console.log(d[d.length-1]);
         d[d.length-1].click();
       
-        if((document.getElementsByClassName('action action-style-4 competition-galop action'))[0] === undefined){
+        if((document.getElementsByClassName('action action-style-4 competition-galop action'))[0] == undefined){
             var pause5= pause4 + getRandomPause(shortPause1*10,shortPause1*10);
             setTimeout(function() {
                 location.reload();
@@ -2342,7 +2337,7 @@ if (/www.lowadi.com\/elevage\/competition\/inscription\?cheval=/.test(window.loc
     setTimeout(competitionInscript,pause3);
     var  pause4 =  pause2 + getRandomPause(mediumPause1*6,mediumPause2*6);
     setTimeout( checkComp,pause4);
-    
+    return; 
 }
 
 function competitionInscript(){
@@ -2547,7 +2542,7 @@ function doEatDef(){// Корм по заданным параметрам
     var d2 = document.getElementById('feeding').innerHTML;
     var hay = 0;
     var oats = 0;
-    if (HayToGive === -1)
+    if (HayToGive == -1)
     {
         hay = hayToGive(); 
     }
@@ -2555,7 +2550,7 @@ function doEatDef(){// Корм по заданным параметрам
     {
         hay = HayToGive;
     }
-    if (OatsToGive === -1)
+    if (OatsToGive == -1)
     {
         oats = oatsToGive();
     }
@@ -2868,7 +2863,7 @@ function giveName(){// Дать имя и аффикс
         var d =document.getElementById('horseNameName');
         var s = ("" + getMyParameterByName(genetics[0])).split(".");
           var nn;
-        if (chevalSexe === 'masculin')
+        if (chevalSexe == 'masculin')
        {
            nn=polM;
         }
@@ -2936,7 +2931,7 @@ function getRandomPause(min, max){
     return rand;
 }
 function openFeeding(){ 
-    if (document.body.innerHTML.indexOf('boutonAllaiter') === -1)
+    if (document.body.innerHTML.indexOf('boutonAllaiter') == -1)
     {      
         var d = document.getElementById('boutonNourrir');
         d.click();
@@ -2980,7 +2975,7 @@ function eqCenterReg3(){
     for(var  i = 1; i <dom.length ;i++) //(var i = dom.length - 1; i >= 0; i--) 
     {
         localisation = ((dom[i].getElementsByClassName('align-left width-19'))[0]).getElementsByTagName('a')[0].className;
-        if( localisation === 'centerLocalisation ' + centerLocalisation){
+        if( localisation == 'centerLocalisation ' + centerLocalisation){
             var text = (dom[i].getElementsByClassName('align-center')[0]).outerHTML;
             var s = text.search('abreuvoir');
             if(s>0){
@@ -2990,7 +2985,7 @@ function eqCenterReg3(){
                     var buttons0 = (dom[i].getElementsByClassName('align-center align-middle spacer-small-left spacer-small-right')[dl]).getElementsByTagName('button'); ////0-на 1 день ,1-на3               
                     for (var j = 0; j < buttons0.length; j++) {
                         var d1=(dom[i].getElementsByClassName('align-center align-middle spacer-small-left spacer-small-right')[dl]).getElementsByClassName('disabled button button-style-8');
-                   if (d1[0] === undefined)
+                   if (d1[0] == undefined)
                      {
                         
                             buttons0[j].click();
@@ -3012,7 +3007,7 @@ function eqCenterReg4(){
         location.reload();
     }
 }
-function ksk_ALL(){
+function ksk_all(){
    var pause=0;
     
     pause=pause+getRandomPause(2000,2500);
