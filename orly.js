@@ -1,15 +1,4 @@
-// Input 0
-var aa = ["661228372", "606006511"], c = 12, m = 10, r = ["galopGenetique"], ba = "", v = "offers" + u(r[0]), w = "doAbort" + u(r[0]);
-void 0 == x(w) && (console.log("!!!" + x(w)), y(w, !1));
-"" != x(v) && void 0 != x(v) || y(v, 0);
-var ca = "amunitionEquiped" + u("sautGenetique");
-if ("undefined" !== typeof vitesseComplet) {
-  var z = vitesseComplet;
-}
-if (window.self != window.top) {
-  throw "stop";
-}
-function da() {
+function aa() {
   var b = document.getElementsByClassName("forumAvatar")[0].alt, e;
   var f = b.length & 3;
   var g = b.length - f;
@@ -41,39 +30,47 @@ function da() {
   d = 3266489909 * (d & 65535) + ((3266489909 * (d >>> 16) & 65535) << 16) & 4294967295;
   return (d ^ d >>> 16) >>> 0;
 }
-var ea = da();
+var ba = aa(), c = 12, m = 10, r = ["galopGenetique"], ca = "", v = "offers" + u(r[0]), w = "doAbort" + u(r[0]);
+void 0 == x(w) && (console.log("!!!" + x(w)), y(w, !1));
+"" != x(v) && void 0 != x(v) || y(v, 0);
+var da = "amunitionEquiped" + u("sautGenetique");
+if ("undefined" !== typeof vitesseComplet) {
+  var z = vitesseComplet;
+}
+if (window.self != window.top) {
+  throw "stop";
+}
 setTimeout(A, 40000);
 /www.lowadi.com\/elevage\/chevaux\/\?elevage=all-horses/.test(window.location.href) && history.go(-2);
 if (/\/marche\/noir\/object\?qName=/.test(window.location.href)) {
   var C = B(1100, 1300);
-  setTimeout(fa, C);
+  setTimeout(ea, C);
   var D = C + B(1100, 1300);
-  setTimeout(ha, D);
+  setTimeout(fa, D);
 }
 if (/\/elevage\/chevaux\/cheval\?id=/.test(window.location.href)) {
-  console.log(ea);
-  for (var ia = da(), ja = !1, E = 0; E < aa.length; E++) {
-    aa[E] == ia && (ja = !0);
+  for (var ha = ["661228372"], ia = aa(), ja = !1, E = 0; E < ha.length; E++) {
+    ha[E] == ia && (ja = !0);
   }
   if (!0 === ja) {
-    if (console.log("License is good"), 80 < document.getElementById("sante").textContent) {
+    if (console.log("License:" + ba), 80 < document.getElementById("sante").textContent) {
       if (6 >= chevalAge) {
         var ka = chevalSexe, F = document.getElementById("tab-genetics").getElementsByClassName("horsename"), la = F[0].href.substring(F[0].href.search("=") + 1), ma = F[F.length - 1].href.substring(F[F.length - 1].href.search("=") + 1);
         console.log(la + ";" + ma + ";" + chevalId);
-        ba = la > ma ? "masculin" : "feminin";
-        if (ka == ba) {
+        ca = la > ma ? "masculin" : "feminin";
+        if (ka == ca) {
           var na = "";
           na = /id=([^&]+)/i.exec(document.location.search)[1];
           window.location = "http://www.lowadi.com/marche/noir/object?qName=eclair-zeus&cheval=" + na;
         } else {
-          -1 == chevalNom.indexOf(".") ? (G(ca), oa()) : H();
+          -1 == chevalNom.indexOf(".") ? (G(da), oa()) : H();
         }
       } else {
         6 < chevalAge && 16 >= chevalAge ? H() : pa();
       }
     }
   } else {
-    alert("\u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0441\u043a\u0440\u0438\u043f\u0442\u0430 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u043f\u0440\u0438\u043e\u0431\u0440\u0435\u0441\u0442\u0438 \u043b\u0438\u0446\u0435\u043d\u0437\u0438\u044e. \u0421\u043e\u043e\u0431\u0449\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 ID \u043f\u0440\u043e\u0434\u0430\u0432\u0446\u0443. ID:" + ea);
+    alert("\u0412\u0430\u0448\u0430 \u043b\u0438\u0446\u0435\u043d\u0437\u0438\u044f \u043d\u0435 \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u043d\u0430! \u0414\u043b\u044f \u0430\u043a\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u0441\u043e\u043e\u0431\u0449\u0438\u0442\u0435 \u043f\u0440\u043e\u0434\u0430\u0432\u0446\u0443 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0443\u044e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e - ID:" + ba);
   }
 }
 function H() {
@@ -117,10 +114,10 @@ function pa() {
     H();
   }, 1300)) : "feminin" == chevalSexe ? wa() : "masculin" == chevalSexe && 10 > parseInt(x(v), 10) ? xa() : "masculin" == chevalSexe && 10 == parseInt(x(v), 10) && (G(v), ya()) : (c = -1, m = 10, va());
 }
-function ha() {
+function fa() {
   document.getElementsByClassName("button button-style-2")[0].click();
 }
-function fa() {
+function ea() {
   var b = document.getElementById("inventaire-utilisation-standard");
   null !== b && b.click();
 }
@@ -247,7 +244,8 @@ function Ga() {
 function Ha() {
   var b = document.getElementsByClassName("button button-style-0");
   document.getElementById("race").options[22].selected = !0;
-  1 == document.getElementById("race").options[22].selected && b.item(0).click();
+  document.getElementById("race").options[22].selected = !0;
+  b.item(0).click();
 }
 function Ia() {
   document.getElementsByClassName("button button-style-0")[1].click();
