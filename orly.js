@@ -99,7 +99,7 @@ var mol = 360;//НАСТРОЙКА, возраст, когда рожаем по
 
 var centerLocalisation = 'centerLocalisationMontagne'; // centerLocalisationForet или centerLocalisationMontagne
 
-
+var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
 var HayToGive = 12;
 var OatsToGive = 10;
     
@@ -161,7 +161,7 @@ if (/\/marche\/noir\/object\?qName=/.test(window.location.href))
 
 if (/\/elevage\/chevaux\/cheval\?id=/.test(window.location.href))
 {
-if (is_lic()===true) {
+if (is_lic()==true) {
          var sante = document.getElementById('sante').textContent;
             if (sante > 80)
             {    
@@ -197,6 +197,7 @@ if (is_lic()===true) {
             }
 
 			}
+		else console.log('Ваша лицензия не активна! Для активации сообщите продаву следующую информацию - ID:'+myhash);	
 }
 
 function ORProg()
