@@ -63,6 +63,7 @@ var lic = false;
  		{
  			if (l[h] === myhash) lic = true;	
  		}
+		else console.log('ID:'+myhash+' ERROR!');
  return lic;		
  		
 }
@@ -78,12 +79,12 @@ var train1 = 'vitesse';
 var train2 = 'dressage';
 var train3 = 'trot';
 
-var polM ='м'; 
-var polJ ='ж';
+var polM ='м';//Что пишем перед гп, если не устраивает- меняем надпись внутри ковычек для мальчика
+var polJ ='ж';// тоже самое- для девочки
 
-var spec = 'montagne'; //специализация кск с общих
+var spec = 'montagne';//специализация кск с общих
 
-var viborksk =  ksk_ALL; //НАСТРОЙКА , КАКОЙ КСК БЕРЕМ. резерв или с общих: ksk_ALL-с общий с душем и поилкой,   kskreserv- резерв
+var viborksk =  ksk_ALL;//НАСТРОЙКА , КАКОЙ КСК БЕРЕМ. резерв или с общих: ksk_ALL-с общий с душем и поилкой,   kskreserv- резерв
 
 var dl =1;//НАСТРОЙКА ДЛИТЕЛЬНОТИ КСК:0- на 1 день, 1- на 3 дня
 
