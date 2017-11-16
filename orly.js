@@ -1,139 +1,3051 @@
-function murmurhash(a,b){var c;var g=a.length&3;var f=a.length-g;var h=b;for(c=0;c<f;){var k=a.charCodeAt(c)&255|(a.charCodeAt(++c)&255)<<8|(a.charCodeAt(++c)&255)<<16|(a.charCodeAt(++c)&255)<<24;++c;k=3432918353*(k&65535)+((3432918353*(k>>>16)&65535)<<16)&4294967295;k=k<<15|k>>>17;k=461845907*(k&65535)+((461845907*(k>>>16)&65535)<<16)&4294967295;h^=k;h=h<<13|h>>>19;h=5*(h&65535)+((5*(h>>>16)&65535)<<16)&4294967295;h=(h&65535)+27492+(((h>>>16)+58964&65535)<<16)}k=0;switch(g){case 3:k^=(a.charCodeAt(c+
-2)&255)<<16;case 2:k^=(a.charCodeAt(c+1)&255)<<8;case 1:k^=a.charCodeAt(c)&255,k=3432918353*(k&65535)+((3432918353*(k>>>16)&65535)<<16)&4294967295,k=k<<15|k>>>17,h^=461845907*(k&65535)+((461845907*(k>>>16)&65535)<<16)&4294967295}h^=a.length;h^=h>>>16;h=2246822507*(h&65535)+((2246822507*(h>>>16)&65535)<<16)&4294967295;h^=h>>>13;h=3266489909*(h&65535)+((3266489909*(h>>>16)&65535)<<16)&4294967295;return(h^h>>>16)>>>0}
-function is_lic(){for(var a=["661228372", "606006511"],b=murmurhash(document.getElementsByClassName("forumAvatar")[0].alt,5),c=!1,g=0;g<a.length;g++)a[g]===b&&(c=!0);return c}
-var walk1="montagne",walk2="foret",train1="vitesse",train2="dressage",train3="trot",polM="\u043c",polJ="\u0436",spec="montagne",viborksk=ksk_ALL,dl=1,shortPause1=20,shortPause2=40,mediumPause1=400,mediumPause2=500,longPause1=550,longPause2=650,nav=0,mol=360,centerLocalisation="centerLocalisationMontagne",myhash=murmurhash(document.getElementsByClassName("forumAvatar")[0].alt,5),HayToGive=12,OatsToGive=10;
-if("undefined"!==typeof e1)var enduranceTComplet=e1,vitesseTComplet=e2,dressageTComplet=e3,galopTComplet=e4,trotTComplet=e5,sautTComplet=e6,foretComplet=b3,montagneComplet=b1;var genetics=["galopGenetique"],lastParentPage="",lastParentSex="",offersToBeDone=10,offers="offers"+getMyParameterByName(genetics[0]),doAbort="doAbort"+getMyParameterByName(genetics[0]);void 0===readCookie(doAbort)&&(console.log("!!!"+readCookie(doAbort)),createCookie(doAbort,!1));
-""!==readCookie(offers)&&void 0!==readCookie(offers)||createCookie(offers,0);var specialisation="specialisationClassique",amSpecialisation="classique",amunitionEquiped="amunitionEquiped"+getMyParameterByName("sautGenetique"),compName="trot";if("undefined"!==typeof vitesseComplet)var compComplet=vitesseComplet;if("undefined"!==typeof trotComplet)var compComplet1=trotComplet;if("undefined"!==typeof dressageComplet)var compComplet2=dressageComplet;if(window.self!=window.top)throw"stop";
-var pause_reload=4E4;setTimeout(reload,pause_reload);/www.lowadi.com\/elevage\/chevaux\/\?elevage=all-horses/.test(window.location.href)&&history.go(-2);if(/\/marche\/noir\/object\?qName=/.test(window.location.href)){var pause=getRandomPause(2*longPause1,2*longPause2);setTimeout(st,pause);var pause1=pause+getRandomPause(2*longPause1,2*longPause2);setTimeout(doR,pause1)}
-if(/\/elevage\/chevaux\/cheval\?id=/.test(window.location.href))if(!0===is_lic()){console.log("License:"+myhash);var sante=document.getElementById("sante").textContent;80<sante&&(6>=chevalAge?chevalSexe===getLastParentSex()?zeus():-1===chevalNom.indexOf(".")?(eraseCookie(amunitionEquiped),giveName()):ORProg():6<chevalAge&&16>=chevalAge?ORProg():MyTrain())}else alert("\u0412\u0430\u0448\u0430 \u043b\u0438\u0446\u0435\u043d\u0437\u0438\u044f \u043d\u0435 \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u043d\u0430! \u0414\u043b\u044f \u0430\u043a\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u0441\u043e\u043e\u0431\u0449\u0438\u0442\u0435 \u043f\u0440\u043e\u0434\u0430\u0432\u0446\u0443 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0443\u044e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e - ID:"+
-myhash);
-function ORProg(){function a(){if(/elevage\/chevaux\/centreInscription\?id=/.test(document.body.innerHTML)){var c=getRandomPause(shortPause1,shortPause2);setTimeout(eqCenterReg,c);c+=getRandomPause(mediumPause1,mediumPause2);setTimeout(a,c)}else getRandomPause(shortPause1,shortPause2),setTimeout(b,c)}function b(){var a=document.getElementsByClassName("action action-style-4 panser action-disabled"),f=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==a[0]||
-void 0!==f[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(groom,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,a))}function c(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled"),b=document.getElementById("feeding"),f=-1;null!==b&&(f=b.innerHTML.indexOf("\u0442\u043e\u043b\u0441\u0442"));void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||
--1!==f||void 0!==a[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(g,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(doEatNorm,a),a+=getRandomPause(longPause1,longPause2),setTimeout(c,a))}function g(){if(20>document.getElementById("energie").innerHTML){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),b=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");void 0!==a[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,
-shortPause2),setTimeout(f,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(g,a))}else a=getRandomPause(shortPause1,shortPause2),setTimeout(f,a)}function f(){var a=document.getElementsByClassName("action action-style-4 coucher-box action-disabled"),b=document.getElementsByClassName("action action-style-4 coucher action-disabled");void 0!==a[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(OR,a),a+=getRandomPause(longPause1,
-longPause2),setTimeout(pauseFunc,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(sleep,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(f,a))}var h=getRandomPause(shortPause1,shortPause2);setTimeout(a,h)}
-function MyTrain(){16<chevalAge&&22>=chevalAge?(OatsToGive=12,Walks1(walk1)):100>getMyParameterByName(train2+"TComplet")?(OatsToGive=12,HayToGive=14,Train(train2)):void 0===document.getElementsByClassName("action action-style-4 competition-galop action")[0]?EquipAmunition():100>getMyParameterByName(train1+"TComplet")?(OatsToGive=12,Train(train1)):100>getMyParameterByName(walk1+"Complet")?(HayToGive=12,OatsToGive=14,Walks(walk1)):compComplet?100>getMyParameterByName(train3+"TComplet")?(OatsToGive=
-12,HayToGive=14,Train(train3)):124>chevalAge?(HayToGive=12,OatsToGive=14,setTimeout(function(){walk(walk2)},400),setTimeout(drink,1E3),setTimeout(function(){ORProg()},1300)):"feminin"===chevalSexe?BirthProg():"masculin"===chevalSexe&&parseInt(readCookie(offers),10)<offersToBeDone?GiveOfferings(5):"masculin"===chevalSexe&&parseInt(readCookie(offers),10)===offersToBeDone&&(eraseCookie(offers),GoToMother()):(HayToGive=-1,OatsToGive=10,CompNoVIP())}
-function zeus(){var a=/id=([^&]+)/i.exec(document.location.search)[1];window.location="http://www.lowadi.com/marche/noir/object?qName=eclair-zeus&cheval="+a}function doR(){document.getElementsByClassName("button button-style-2")[0].click()}function st(){var a=document.getElementById("inventaire-utilisation-standard");null!==a&&a.click()}
-function GiveOfferings(a){function b(){var e=document.getElementsByClassName("action action-style-4 panser action-disabled"),a=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==e[0]||void 0!==a[0]?(e=getRandomPause(shortPause1,shortPause2),setTimeout(c,e)):(e=getRandomPause(shortPause1,shortPause2),setTimeout(groom,e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,e))}function c(){if(800<timeConvert()&&1200>timeConvert()){var a=getRandomPause(shortPause1,
-shortPause2);setTimeout(function(){competitionByName1()},a);a+=getRandomPause(mediumPause1,mediumPause2);setTimeout(c,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(g,a)}function g(){if(540>timeConvert()){var a=getRandomPause(shortPause1,shortPause2);setTimeout(giveOfferForTeam,a);a+=getRandomPause(2*longPause1,2*longPause2);setTimeout(g,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(f,a)}function f(){var a=document.getElementsByClassName("action action-style-4 boire action-disabled"),
-l=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(h,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(f,a))}function h(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled");void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||
-void 0!==a[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(k,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(openFeeding,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(doEatDef,a),a+=getRandomPause(longPause1,longPause2),setTimeout(h,a))}function k(){if(22<document.getElementById("energie").innerHTML&&800>timeConvert()){var a=getRandomPause(shortPause1,shortPause2);setTimeout(giveOfferForTeam,a);a+=getRandomPause(3*longPause1,3*longPause2);setTimeout(k,a)}else a=getRandomPause(shortPause1,
-shortPause2),setTimeout(m,a)}function m(){var e=document.getElementsByClassName("action action-style-4 caresser action-disabled"),l=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");1100<timeConvert()||void 0!==e[0]||void 0!==l[0]||(console.log("offers="+readCookie(offers)),createCookie(offers,parseInt(readCookie(offers),10)+a),console.log("offers="+readCookie(offers)));e=getRandomPause(shortPause1,shortPause2);setTimeout(n,e)}function n(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),
-l=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(p,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(n,a))}function p(){var a=document.getElementsByClassName("action action-style-4 carotte action-disabled"),l=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");void 0!==
-a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(q,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(carrot,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(p,a))}function q(){var a=document.getElementsByClassName("action action-style-4 carotte action-disabled"),l=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled"),b=document.getElementsByClassName("action action-style-4 coucher-box action-disabled");void 0===b[0]||void 0===
-a[0]&&void 0===l[0]||parseInt(readCookie(offers),10)!==offersToBeDone?void 0===b[0]||void 0===a[0]&&void 0===l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(sleep,a),a+=getRandomPause(3*longPause1,3*longPause2),setTimeout(q,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(OR,a),a+=getRandomPause(3*longPause1,3*longPause2),setTimeout(pauseFunc,a)):(eraseCookie(offers),GoToMother())}var r=getRandomPause(shortPause1,shortPause2);setTimeout(b,r)}
-function GoToMother(){var a=document.getElementsByClassName("horsename")[1].href;document.location.replace("http://www.lowadi.com/elevage/chevaux/cheval?id="+a.substring(a.search("=")+1))}
-function giveOfferForTeam(){var a=0+getRandomPause(mediumPause1,mediumPause2);setTimeout(openReproduction,a);a+=getRandomPause(mediumPause1,mediumPause2);setTimeout(selectTeamOffers,a);var b=a+getRandomPause(mediumPause1,mediumPause2);setTimeout(doOffer,b);a+=getRandomPause(longPause1,longPause2);setTimeout(pauseFunc,a)}function selectTeamOffers(){document.getElementById("formMalePublicTypeEquipe").click()}function doOffer(){document.getElementById("boutonMaleReproduction").click()}
-function timeConvert(){var a=document.getElementsByClassName("hour").item(0).innerHTML,b=parseInt(a.substring(0,3));a=parseInt(a.substring(3));return 60*b+a}
-function BirthProg(){console.log(doAbort+"="+readCookie(doAbort));var a=null!==document.getElementById("alerteVeterinaireContent")&&(0===readCookie(doAbort)||chevalAge>mol);console.log("\u0423\u0441\u043b\u043e\u0432\u0438\u0435 \u0440\u043e\u0434\u0438\u0442\u044c = "+a);a?document.getElementById("lienVeterinaire").click():800<timeConvert()?(a=getRandomPause(mediumPause1,mediumPause2),setTimeout(ORProg,a)):0===nav?(a=getRandomPause(shortPause1,shortPause2),setTimeout(openReproduction,a),a+=getRandomPause(mediumPause1,
-mediumPause2),setTimeout(Train1,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(openReproduction,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(ORProg,a))}
-function Train1(){void 0!==document.getElementsByClassName("action action-style-4 competition-galop action-disabled")[0]?ORProg():100>getMyParameterByName(walk2+"Complet")?(HayToGive=14,OatsToGive=12,WalksBirth(walk2)):100>getMyParameterByName("enduranceTComplet")?(OatsToGive=12,HayToGive=-1,Train("endurance")):100>getMyParameterByName("galopTComplet")?(OatsToGive=12,Train("galop")):100>getMyParameterByName("sautTComplet")?(OatsToGive=12,Train("saut")):ORProg()}
-function openReproduction(){if(null!==document.getElementById("reproduction-bottom")){var a=document.getElementById("reproduction-tab-0").getElementsByTagName("a")[1];a.click();if(-1!=a.className.indexOf("action action-style-4 echographie")){var b="";a=getRandomPause(shortPause1,shortPause2);setTimeout(function(){var a=document.getElementById("reproduction-tab-1").getElementsByClassName("col-1");console.log(a);a=a[0].childNodes[0].nodeValue;console.log(a);b=-1!=a.indexOf("\u0436\u0435\u0440\u0435\u0431")?
-"masculin":"feminin";console.log("childSexe="+b);lParentSex=getLastParentSexForBirth();console.log("!!getLastParentSexForBirth="+getLastParentSexForBirth());lParentSex===b?createCookie(doAbort,1):createCookie(doAbort,0);console.log("openReproduction/doAbort="+readCookie(doAbort))},a)}}}function reserve(){"tab-style-6-0-0 selected"!=document.getElementById("tab-1").className&&document.getElementsByClassName("tab-action")[1].click()}
-function doReproduction(){var a=document.getElementsByClassName("button button-style-0");document.getElementById("race").options[22].selected=!0;document.getElementById("race").options[22].selected=!0;a.item(0).click()}function doReproduction2(){document.getElementsByClassName("button button-style-0")[1].click()}
-if(/www.lowadi.com\/elevage\/chevaux\/choisirNoms\?jument=/.test(window.location.href)){-1!==document.body.innerHTML.indexOf("femelle_v1828806360.png")?document.getElementById("poulain-1").setAttribute("value","\u041a\u043e\u0431\u044b\u043b\u0430"):document.getElementById("poulain-1").setAttribute("value","\u0416\u0435\u0440\u0435\u0431\u0435\u043d\u043e\u043a");var d=document.getElementsByTagName("button");"submit"==d[d.length-1].getAttribute("type")&&d[d.length-1].click()}
-/www.lowadi.com\/elevage\/chevaux\/saillie\?offre=/.test(window.location.href)&&(pause=getRandomPause(longPause1,longPause2),setTimeout(function(){document.getElementById("boutonDoReproduction").click()},pause));
-if(/www.lowadi.com\/elevage\/chevaux\/rechercherMale\?jument=/.test(window.location.href)){pause=getRandomPause(2*longPause1,2*longPause2);setTimeout(reserve,pause);pause1=pause+getRandomPause(2*longPause1,2*longPause2);setTimeout(doReproduction,pause1);var pause2=pause1+getRandomPause(2*longPause1,2*longPause2);setTimeout(doReproduction2,pause2)}function loadURL(a){var b=new XMLHttpRequest;b.open("GET",a,!1);b.send(null);return b.responseText}
-function getGenetics(a){document.getElementById("tab-genetics-title").onclick();return document.getElementById(a).childNodes[0].nodeValue}
-function getLastParent(){if(""===lastParentPage){var a=document.getElementsByClassName("horsename");console.log(a);var b=a[0].href.substring(a[0].href.search("=")+1);a=a[a.length-1].href.substring(a[a.length-1].href.search("=")+1);b>a?(lastParentPage="",lastParentPage=loadURL("http://www.lowadi.com/elevage/fiche/?id="+b)):(lastParentPage="",lastParentPage=loadURL("http://www.lowadi.com/elevage/fiche/?id="+a))}return lastParentPage}
-function getLastParentSex(){var a=document.getElementById("tab-genetics").getElementsByClassName("horsename"),b=a[0].href.substring(a[0].href.search("=")+1);a=a[a.length-1].href.substring(a[a.length-1].href.search("=")+1);console.log(b+";"+a+";"+chevalId);return lastParentSex=b>a?"masculin":"feminin"}
-function getLastParentSexForBirth(){var a=document.getElementById("reproduction").getElementsByClassName("horsename");console.log(a);a=a[0].href.substring(a[0].href.search("=")+1);console.log("d0="+a+"; d="+chevalId);lastParentSexForBirth=chevalId>a?"feminin":"masculin";console.log("lastParentSexForBirth="+lastParentSexForBirth);return lastParentSexForBirth}function getLastParentGenetics(a){var b=getLastParent();a=b.substring(b.search(a)+a.length+2);return a.substring(0,a.search("<"))}
-function Walks(a){function b(){var a=document.getElementsByClassName("action action-style-4 panser action-disabled"),l=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(groom,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,a))}function c(){var a=document.getElementById("moral").textContent,l=document.getElementsByClassName("action action-style-4 boire action-disabled"),
-b=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");99<a||void 0!==l[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(g,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(c,a))}function g(){if(840>timeConvert()){var a=getRandomPause(shortPause1,shortPause2);setTimeout(function(){competitionByNameVIP(compName)},a);a+=getRandomPause(longPause1,longPause2);setTimeout(g,
-a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(f,a)}function f(){if(void 0!==document.getElementsByClassName("action action-style-4 mash action-disabled")[0]){var a=getRandomPause(shortPause1,shortPause2);setTimeout(h,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(mash,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(f,a)}function h(){var a=document.getElementsByClassName("action action-style-4 boire action-disabled"),l=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");
-void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(k,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(h,a))}function k(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled"),l=document.getElementById("feeding"),b=-1;null!==l&&(b=l.innerHTML.indexOf("\u0442\u043e\u043b\u0441\u0442"));void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||
--1!==b||void 0!==a[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(m,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(doEatDef,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,a))}function m(){var e=document.getElementsByClassName("action action-style-4 caresser action-disabled"),l=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled"),b=document.getElementsByClassName("action action-style-4 carotte action-disabled"),c=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled"),
-r=document.getElementById("energie").innerHTML;void 0!==e[0]||void 0!==l[0]||void 0!==b[0]||void 0!==c[0]||10>r||1300<timeConvert()?(e=getRandomPause(shortPause1,shortPause2),setTimeout(n,e)):(e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){walk(a)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(m,e))}function n(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),l=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");
-void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(p,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(n,a))}function p(){var a=document.getElementsByClassName("action action-style-4 carotte action-disabled"),l=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(q,a)):(a=getRandomPause(shortPause1,
-shortPause2),setTimeout(carrot,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(p,a))}function q(){if(void 0!==document.getElementsByClassName("action action-style-4 coucher-box action-disabled")[0]){var a=getRandomPause(shortPause1,shortPause2);setTimeout(OR,a);a+=getRandomPause(longPause1,longPause2);setTimeout(pauseFunc,a);a+=getRandomPause(3*longPause1,3*longPause2);setTimeout(reload,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(sleep,a),a+=getRandomPause(mediumPause1,
-mediumPause2),setTimeout(q,a)}var r=getRandomPause(shortPause1,shortPause2);setTimeout(b,r)}
-function WalksBirth(a){function b(){var a=document.getElementsByClassName("action action-style-4 panser action-disabled"),l=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(groom,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,a))}function c(){if(600<timeConvert()||36<chevalAge){var e=getRandomPause(shortPause1,
-shortPause2);setTimeout(g,e)}else e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){walk00(a,5)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(c,e)}function g(){if(655<timeConvert()){var e=getRandomPause(shortPause1,shortPause2);setTimeout(f,e)}else e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){walk00(a,4)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(g,e)}function f(){if(void 0!==document.getElementsByClassName("action action-style-4 mash action-disabled")[0]){var a=
-getRandomPause(shortPause1,shortPause2);setTimeout(h,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(mash,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(f,a)}function h(){var a=document.getElementsByClassName("action action-style-4 boire action-disabled"),l=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(k,a)):(a=getRandomPause(shortPause1,shortPause2),
-setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(h,a))}function k(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled"),l=document.getElementById("feeding"),b=-1;null!==l&&(b=l.innerHTML.indexOf("\u0442\u043e\u043b\u0441\u0442"));void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||-1!==b||void 0!==a[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(m,a)):(a=getRandomPause(shortPause1,
-shortPause2),setTimeout(doEatDef,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,a))}function m(){var e=document.getElementsByClassName("action action-style-4 caresser action-disabled"),l=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled"),b=document.getElementsByClassName("action action-style-4 carotte action-disabled"),c=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled"),r=document.getElementById("energie").innerHTML;
-void 0!==e[0]||void 0!==l[0]||void 0!==b[0]||void 0!==c[0]||10>r||1320<timeConvert()?(e=getRandomPause(shortPause1,shortPause2),setTimeout(n,e)):(e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){walk(a)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(m,e))}function n(){document.getElementById("energie");var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),l=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");
-void 0!==a[0]||void 0!==l[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(p,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(n,a))}function p(){var a=document.getElementById("energie").innerHTML,l=document.getElementsByClassName("action action-style-4 carotte action-disabled"),b=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");void 0!==l[0]||void 0!==b[0]||20<a?(a=getRandomPause(shortPause1,
-shortPause2),setTimeout(q,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(carrot,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(p,a))}function q(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),l=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");void 0===document.getElementsByClassName("action action-style-4 coucher-box action-disabled")[0]||void 0===a[0]&&void 0===l[0]?(a=getRandomPause(shortPause1,
-shortPause2),setTimeout(sleep,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(q,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(OR,a),a+=getRandomPause(longPause1,longPause2),setTimeout(pauseFunc,a),a+=getRandomPause(2*longPause1,2*longPause2),setTimeout(reload,a))}var r=getRandomPause(shortPause1,shortPause2);setTimeout(b,r)}
-function Walks1(a){function b(){var a=document.getElementsByClassName("action action-style-4 panser action-disabled"),e=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==a[0]||void 0!==e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(groom,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,a))}function c(){if(600<timeConvert()||36<chevalAge){var e=getRandomPause(shortPause1,
-shortPause2);setTimeout(g,e)}else e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){walk00(a,5)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(c,e)}function g(){if(600>timeConvert()&&36<chevalAge){var a=getRandomPause(shortPause1,shortPause2);setTimeout(function(){competitionByNameVIP(compName)},a);a+=getRandomPause(mediumPause1,mediumPause2);setTimeout(g,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(f,a)}function f(){if(655<timeConvert()){var e=getRandomPause(shortPause1,
-shortPause2);setTimeout(h,e)}else e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){walk00(a,4)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(f,e)}function h(){if(void 0!==document.getElementsByClassName("action action-style-4 mash action-disabled")[0]){var a=getRandomPause(shortPause1,shortPause2);setTimeout(k,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(mash,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(h,a)}function k(){var a=document.getElementsByClassName("action action-style-4 boire action-disabled"),
-e=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");void 0!==a[0]||void 0!==e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(m,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,a))}function m(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled"),e=document.getElementById("feeding"),b=-1;null!==e&&(b=e.innerHTML.indexOf("\u0442\u043e\u043b\u0441\u0442"));
-void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||-1!==b||void 0!==a[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(n,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(doEatDef,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(m,a))}function n(){var e=document.getElementsByClassName("action action-style-4 caresser action-disabled"),b=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled"),
-c=document.getElementsByClassName("action action-style-4 carotte action-disabled"),r=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled"),q=document.getElementById("energie").innerHTML;void 0!==e[0]||void 0!==b[0]||void 0!==c[0]||void 0!==r[0]||10>q||1320<timeConvert()?(e=getRandomPause(shortPause1,shortPause2),setTimeout(p,e)):(e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){walk(a)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(n,
-e))}function p(){document.getElementById("energie");var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),e=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");void 0!==a[0]||void 0!==e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(q,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(p,a))}function q(){var a=document.getElementById("energie").innerHTML,
-e=document.getElementsByClassName("action action-style-4 carotte action-disabled"),b=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");void 0!==e[0]||void 0!==b[0]||20<a?(a=getRandomPause(shortPause1,shortPause2),setTimeout(r,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(carrot,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(q,a))}function r(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),e=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");
-void 0===document.getElementsByClassName("action action-style-4 coucher-box action-disabled")[0]||void 0===a[0]&&void 0===e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(sleep,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(r,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(OR,a),a+=getRandomPause(longPause1,longPause2),setTimeout(pauseFunc,a),a+=getRandomPause(2*longPause1,2*longPause2),setTimeout(reload,a))}var e=getRandomPause(shortPause1,shortPause2);setTimeout(b,
-e)}
-function walk00(a,b){document.getElementById("energie");var c=timeConvert();c=Math.floor((1360-c)/30);switch(a){case "foret":var g=document.getElementById("walkforetSlider").getElementsByTagName("li");var f=document.getElementById("walkforetSlider-sliderHidden");var h=document.getElementById("walk-foret-submit");break;case "montagne":g=document.getElementById("walkmontagneSlider").getElementsByTagName("li"),f=document.getElementById("walkmontagneSlider-sliderHidden"),h=document.getElementById("walk-montagne-submit")}for(c=trainTime=
-b<=c?b:c;0<=c;c--)if("green hiddenNumber disabled"!==g[c].className&&"green disabled"!==g[c].className){g[c].className+=" selected";g[c].click();f.value=c;g[c].click();h.click();break}}
-function walk(a){document.getElementById("energie");var b=timeConvert();b=Math.floor((1380-b)/30);switch(a){case "foret":var c=document.getElementById("walkforetSlider").getElementsByTagName("li");var g=document.getElementById("walkforetSlider-sliderHidden");var f=document.getElementById("walk-foret-submit");break;case "montagne":c=document.getElementById("walkmontagneSlider").getElementsByTagName("li"),g=document.getElementById("walkmontagneSlider-sliderHidden"),f=document.getElementById("walk-montagne-submit")}for(a=
-20<=b?20:b;0<=a;a--)if("green hiddenNumber disabled"!==c[a].className&&"green disabled"!==c[a].className){c[a].className+=" selected";c[a].click();g.value=a;c[a].click();f.click();break}}function Train(a){switch(a){case "dressage":Train9(a);break;case "saut":Train3(a);break;case "vitesse":case "trot":Train7(a);break;case "endurance":Train3(a);break;case "galop":Train3(a)}}
-function Train9(a){function b(){var a=document.getElementsByClassName("action action-style-4 panser action-disabled"),r=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==a[0]||void 0!==r[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(groom,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,a))}function c(){var a=document.getElementById("energie").textContent;if(90>a&&670<
-timeConvert())a=getRandomPause(shortPause1,shortPause2),setTimeout(g,a);else{var b=getMyParameterByName("dressageTComplet");96>b?(a=getRandomPause(shortPause1,shortPause2),setTimeout(function(){train("dressage",12)},a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(c,a)):95<b&&670>timeConvert()&&95<b&&20<a?(a=getRandomPause(shortPause1,shortPause2),setTimeout(function(){train("dressage",4)},a),a+=getRandomPause(longPause1,longPause2),setTimeout(function(){train("vitesse",3)},a),a+=getRandomPause(mediumPause1,
-mediumPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(g,a))}}function g(){if(void 0!==document.getElementsByClassName("action action-style-4 mash action-disabled")[0]){var a=getRandomPause(shortPause1,shortPause2);setTimeout(f,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(mash,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(g,a)}function f(){var a=document.getElementsByClassName("action action-style-4 boire action-disabled"),b=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");
-void 0!==a[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(h,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(f,a))}function h(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled"),b=document.getElementById("feeding"),e=-1;null!==b&&(e=b.innerHTML.indexOf("\u0442\u043e\u043b\u0441\u0442"));void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||
--1!==e||void 0!==a[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(k,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(doEatDef,a),a+=getRandomPause(longPause1,longPause2),setTimeout(h,a))}function k(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),b=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled"),e=document.getElementById("energie").textContent;30>e||void 0!==a[0]||void 0!==b[0]||1230<timeConvert()?
-(e=getRandomPause(shortPause1,shortPause2),setTimeout(m,e)):(a=getMyParameterByName("vitesseTComplet"),100>a?(e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){train("vitesse",12)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,e)):100==a&&1150>timeConvert()&&100==a&&20<e?(e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){walk(walk2)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,e)):(e=getRandomPause(shortPause1,shortPause2),setTimeout(m,e)))}
-function m(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),b=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");void 0!==a[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(n,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(m,a))}function n(){var a=document.getElementById("energie").textContent,b=document.getElementsByClassName("action action-style-4 carotte action-disabled"),
-e=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");19<a||void 0!==b[0]||void 0!==e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(p,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(carrot,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(n,a))}function p(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),b=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");
-void 0===document.getElementsByClassName("action action-style-4 coucher-box action-disabled")[0]||void 0===a[0]&&void 0===b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(sleep,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(p,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(OR,a),a+=getRandomPause(longPause1,longPause2),setTimeout(pauseFunc,a),a+=getRandomPause(2*longPause1,2*longPause2),setTimeout(reload,a))}a=getRandomPause(shortPause1,shortPause2);setTimeout(b,a)}
-function Train7(a){function b(){var a=document.getElementsByClassName("action action-style-4 panser action-disabled"),e=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==a[0]||void 0!==e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(groom,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,a))}function c(){if(70>document.getElementById("energie").textContent){var b=getRandomPause(shortPause1,
-shortPause2);setTimeout(g,b)}else b=getMyParameterByName(a+"TComplet"),93>=b?(b=getRandomPause(shortPause1,shortPause2),setTimeout(function(){train(a,5)},b),b+=getRandomPause(mediumPause1,mediumPause2),setTimeout(c,b)):93<b?(b=getRandomPause(shortPause1,shortPause2),setTimeout(function(){train(a,6)},b),b+=getRandomPause(longPause1,longPause2),setTimeout(c,b)):(b=getRandomPause(shortPause1,shortPause2),setTimeout(g,b))}function g(){if(void 0!==document.getElementsByClassName("action action-style-4 mash action-disabled")[0]){var a=
-getRandomPause(shortPause1,shortPause2);setTimeout(f,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(mash,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(g,a)}function f(){var a=document.getElementsByClassName("action action-style-4 boire action-disabled"),e=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");void 0!==a[0]||void 0!==e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(h,a)):(a=getRandomPause(shortPause1,shortPause2),
-setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(f,a))}function h(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled"),e=document.getElementById("feeding"),b=-1;null!==e&&(b=e.innerHTML.indexOf("\u0442\u043e\u043b\u0441\u0442"));void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||-1!==b||void 0!==a[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(k,a)):(a=getRandomPause(shortPause1,
-shortPause2),setTimeout(doEatDef,a),a+=getRandomPause(longPause1,longPause2),setTimeout(h,a))}function k(){var b=document.getElementsByClassName("action action-style-4 caresser action-disabled"),e=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled"),c=document.getElementById("energie").textContent;(15>c||void 0!==b[0]||void 0!==e[0])&&1260<timeConvert()?(c=getRandomPause(shortPause1,shortPause2),setTimeout(m,c)):(b=getMyParameterByName(a+"TComplet"),93>=b&&1261>
-timeConvert()&&19<c?(c=getRandomPause(shortPause1,shortPause2),setTimeout(function(){train(a,20)},c),c+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,c)):93<b&&1261>timeConvert()&&93<b&&20<c?(c=getRandomPause(shortPause1,shortPause2),setTimeout(function(){competitionByName1()},c),c+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,c)):(c=getRandomPause(shortPause1,shortPause2),setTimeout(m,c)))}function m(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),
-e=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");void 0!==a[0]||void 0!==e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(n,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(m,a))}function n(){var a=document.getElementById("energie").textContent,e=document.getElementsByClassName("action action-style-4 carotte action-disabled"),b=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");
-19<a||void 0!==e[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(p,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(carrot,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(n,a))}function p(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),e=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");void 0===document.getElementsByClassName("action action-style-4 coucher-box action-disabled")[0]||
-void 0===a[0]&&void 0===e[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(sleep,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(p,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(OR,a),a+=getRandomPause(longPause1,longPause2),setTimeout(pauseFunc,a),a+=getRandomPause(2*longPause1,2*longPause2),setTimeout(reload,a))}var q=getRandomPause(shortPause1,shortPause2);setTimeout(b,q)}
-function Train3(a){function b(){var a=document.getElementsByClassName("action action-style-4 panser action-disabled"),f=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==a[0]||void 0!==f[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(groom,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,a))}function c(){var e=document.getElementById("energie").textContent;if(590<timeConvert())e=
-getRandomPause(shortPause1,shortPause2),setTimeout(g,e);else{var b=getMyParameterByName(a+"TComplet");94>b?(e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){train(a,7)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(c,e)):93<b&&600>timeConvert()&&93<b&&20<e?(e=getRandomPause(shortPause1,shortPause2),setTimeout(function(){train(a,6)},e),e+=getRandomPause(mediumPause1,mediumPause2),setTimeout(c,e)):(e=getRandomPause(shortPause1,shortPause2),setTimeout(g,e))}}function g(){if(void 0!==
-document.getElementsByClassName("action action-style-4 mash action-disabled")[0]){var a=getRandomPause(shortPause1,shortPause2);setTimeout(f,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(mash,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(g,a)}function f(){var a=document.getElementsByClassName("action action-style-4 boire action-disabled"),b=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");void 0!==a[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,
-shortPause2),setTimeout(h,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(f,a))}function h(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled"),b=document.getElementById("feeding"),c=-1;null!==b&&(c=b.innerHTML.indexOf("\u0442\u043e\u043b\u0441\u0442"));void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||-1!==c||void 0!==a[0]?
-(a=getRandomPause(shortPause1,shortPause2),setTimeout(k,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(openFeeding,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(doEatDef,a),a+=getRandomPause(longPause1,longPause2),setTimeout(h,a))}function k(){var b=document.getElementById("energie").textContent,c=Math.floor(10*b/63),f=getMyParameterByName(a+"TComplet");30>b||1100<timeConvert()||91<f?(b=getRandomPause(shortPause1,shortPause2),setTimeout(m,b)):(b=getRandomPause(shortPause1,
-shortPause2),setTimeout(function(){train(a,c)},b),b+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,b))}function m(){var b=document.getElementById("energie").textContent,c=getMyParameterByName(a+"TComplet");20>b||1200<timeConvert()||92>c?(b=getRandomPause(shortPause1,shortPause2),setTimeout(n,b)):(b=getRandomPause(shortPause1,shortPause2),setTimeout(function(){competitionByName1()},b),b+=getRandomPause(mediumPause1,mediumPause2),setTimeout(m,b))}function n(){var a=document.getElementsByClassName("action action-style-4 caresser action-disabled"),
-b=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");void 0!==a[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(p,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(n,a))}function p(){var a=document.getElementsByClassName("action action-style-4 carotte action-disabled"),b=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");void 0!==
-a[0]||void 0!==b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(q,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(carrot,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(p,a))}function q(){var a=document.getElementsByClassName("action action-style-4 carotte action-disabled"),b=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");void 0===document.getElementsByClassName("action action-style-4 coucher-box action-disabled")[0]||void 0===
-a[0]&&void 0===b[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(sleep,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(q,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(OR,a),a+=getRandomPause(longPause1,longPause2),setTimeout(pauseFunc,a))}var r=getRandomPause(shortPause1,shortPause2);setTimeout(b,r)}
-function train(a,b){var c,g=timeConvert();g=Math.floor((1360-g)/30);switch(a){case "endurance":var f=document.getElementById("trainingEnduranceSlider").getElementsByTagName("li");var h=document.getElementById("trainingEnduranceSlider-sliderHidden");var k=document.getElementById("training-endurance-submit");break;case "vitesse":f=document.getElementById("trainingVitesseSlider").getElementsByTagName("li");h=document.getElementById("trainingVitesseSlider-sliderHidden");k=document.getElementById("training-vitesse-submit");
-break;case "dressage":f=document.getElementById("trainingDressageSlider").getElementsByTagName("li");h=document.getElementById("trainingDressageSlider-sliderHidden");k=document.getElementById("training-dressage-submit");break;case "galop":f=document.getElementById("trainingGalopSlider").getElementsByTagName("li");h=document.getElementById("trainingGalopSlider-sliderHidden");k=document.getElementById("training-galop-submit");break;case "trot":f=document.getElementById("trainingTrotSlider").getElementsByTagName("li");
-h=document.getElementById("trainingTrotSlider-sliderHidden");k=document.getElementById("training-trot-submit");break;case "saut":f=document.getElementById("trainingSautSlider").getElementsByTagName("li"),h=document.getElementById("trainingSautSlider-sliderHidden"),k=document.getElementById("training-saut-submit")}for(b<=g?c=b:b>g&&(c=g);0<=c;c--)if("green hiddenNumber disabled"!==f[c].className&&"green disabled"!==f[c].className){f[c].className+=" selected";f[c].click();h.value=c;f[c].click();k.click();
-break}}function EquipAmunition(){var a=pause+getRandomPause(mediumPause1,mediumPause2);setTimeout(specialization,a);a+=getRandomPause(mediumPause1,mediumPause2);setTimeout(amunition1,a);a+=getRandomPause(3*mediumPause1,3*mediumPause2);setTimeout(amunition2,a)}function specialization(){document.getElementById(specialisation).getElementsByTagName("button")[0].click();setTimeout(function(){location.reload()},1500)}
-function amunition1(){var a=document.getElementById("competition-body-content").getElementsByTagName("a");console.log(a[0]);a[0].click()}function amunitionById(a){document.getElementById(a).click()}
-function amunition2(){var a=0+getRandomPause(4*mediumPause1,4*mediumPause2);setTimeout(function(){amunitionById("modele-tapis-"+amSpecialisation+"-1x")},a);a+=getRandomPause(mediumPause1,mediumPause2);setTimeout(function(){amunitionById("modele-selle-"+amSpecialisation+"-1x")},a);a+=getRandomPause(mediumPause1,mediumPause2);setTimeout(function(){amunitionById("modele-bride-"+amSpecialisation+"-1x")},a);var b=a+getRandomPause(mediumPause1,mediumPause2);setTimeout(function(){var a=document.getElementById("choisir-equipement-popup-content").getElementsByTagName("button");
-console.log(a[a.length-1]);a[a.length-1].click();void 0===document.getElementsByClassName("action action-style-4 competition-galop action")[0]&&(getRandomPause(10*shortPause1,10*shortPause1),setTimeout(function(){location.reload()},b))},b)}
-if(/www.lowadi.com\/elevage\/competition\/inscription\?cheval=/.test(window.location.href)){pause2=getRandomPause(2*mediumPause1,2*mediumPause2);setTimeout(competitionInscript,pause2);var pause3=pause2+getRandomPause(4*mediumPause1,4*mediumPause2);setTimeout(competitionInscript,pause3);var pause4=pause2+getRandomPause(6*mediumPause1,6*mediumPause2);setTimeout(checkComp,pause4)}function competitionInscript(){document.getElementsByClassName("button button-style-0").item(0).click()}
-function checkComp(){void 0!==document.getElementsByClassName("fieldErrorText into")[0]&&location.reload()}function competitionByName1(){compComplet||competitionByNameVIP("trot")}function competitionByName(a){a=document.getElementsByClassName("action action-style-4 competition-"+a);document.location.replace(a.item(0).href)}function competitionByNameVIP(a){document.getElementsByClassName("action action-style-4 competition-"+a).item(0).click()}
-function CompNoVIP(){function a(){var c=document.getElementsByClassName("action action-style-4 panser action-disabled"),f=document.getElementsByClassName("action action-style-4 panser-rainbow action-disabled");void 0!==c[0]||void 0!==f[0]?(c=getRandomPause(shortPause1,shortPause2),setTimeout(b,c)):(c=getRandomPause(shortPause1,shortPause2),setTimeout(groom,c),c+=getRandomPause(mediumPause1,mediumPause2),setTimeout(a,c))}function b(){var a=document.getElementsByClassName("action action-style-4 boire action-disabled"),
-f=document.getElementsByClassName("action action-style-4 boire-fontaine action-disabled");void 0!==a[0]||void 0!==f[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(c,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(drink,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(b,a))}function c(){if(700>timeConvert()){var a=getRandomPause(shortPause1,shortPause2);setTimeout(function(){competitionByName1()},a);a+=getRandomPause(longPause1,longPause2);setTimeout(c,a)}else a=getRandomPause(shortPause1,
-shortPause2),setTimeout(g,a)}function g(){var a=document.getElementsByClassName("action action-style-4 allaiter action-disabled");void 0!==document.getElementsByClassName("tab-action tab-action-select action action-style-4 nourrir-entame")[0]||void 0!==a[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(f,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(openFeeding,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(doEatDef,a),a+=getRandomPause(longPause1,longPause2),setTimeout(g,
-a))}function f(){if(1290>timeConvert()){var a=getRandomPause(shortPause1,shortPause2);setTimeout(function(){competitionByNameVIP("trot")},a);a+=getRandomPause(longPause1,longPause2);setTimeout(f,a)}else a=getRandomPause(shortPause1,shortPause2),setTimeout(h,a)}function h(){var a=document.getElementById("energie").textContent,b=document.getElementsByClassName("action action-style-4 caresser action-disabled"),c=document.getElementsByClassName("action action-style-4 caresser-rainbow action-disabled");
-20<a||void 0!==b[0]||void 0!==c[0]?(a=getRandomPause(shortPause1,shortPause2),setTimeout(k,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(stroke,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(h,a))}function k(){var a=document.getElementById("energie").textContent,b=document.getElementsByClassName("action action-style-4 carotte action-disabled"),c=document.getElementsByClassName("action action-style-4 carotte-rainbow action-disabled");20<a||void 0!==b[0]||void 0!==c[0]?(a=getRandomPause(shortPause1,
-shortPause2),setTimeout(m,a)):(a=getRandomPause(shortPause1,shortPause2),setTimeout(carrot,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(k,a))}function m(){if(void 0!==document.getElementsByClassName("action action-style-4 coucher-box action-disabled")[0]){var a=getRandomPause(shortPause1,shortPause2);setTimeout(OR,a);a+=getRandomPause(longPause1,longPause2);setTimeout(pauseFunc,a);a+=getRandomPause(2*longPause1,2*longPause2);setTimeout(reload,a)}else a=getRandomPause(shortPause1,shortPause2),
-setTimeout(sleep,a),a+=getRandomPause(mediumPause1,mediumPause2),setTimeout(m,a)}var n=getRandomPause(shortPause1,shortPause2);setTimeout(a,n)}
-function doEatDef(){var a=!1,b=document.getElementById("feeding").innerHTML;var c=-1===HayToGive?hayToGive():HayToGive;var g=-1===OatsToGive?oatsToGive():OatsToGive;if(0!==c+g){-1!==b.indexOf("\u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u044b\u0439")&&(c=20-hayGiven(),g=15-oatsGiven());if(-1!==b.indexOf("haySlider")){var f=document.getElementById("haySlider").getElementsByTagName("li");a=c;f[a].className+=" selected";f[a].click();f=document.getElementById("haySlider-sliderHidden");
-f.setAttribute("value",a);a=!0}-1!==b.indexOf("oatsSlider")&&(f=document.getElementById("oatsSlider").getElementsByTagName("li"),a=g,f[a].className+=" selected",f[a].click(),f=document.getElementById("oatsSlider-sliderHidden"),f.setAttribute("value",a),a=!0);!1===a&&(-1!==b.indexOf('id="feedingHay"')&&(document.getElementById("feedingHay").options[c].selected=!0),-1!==b.indexOf('id="feedingOats"')&&(document.getElementById("feedingOats").options[g].selected=!0));b=document.getElementById("feed-button");
-null!==b&&b.click()}}
-function doEatPre(){if(-1!==document.body.innerHTML.indexOf("boutonAllaiter"))document.getElementById("boutonAllaiter").click();else{var a=!1,b=document.getElementById("feeding").innerHTML,c=hayToGive(),g=oatsToGive();if(0!==c+g&&-1===b.indexOf("\u0442\u043e\u043b\u0441\u0442")){-1!==b.indexOf("\u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u044b\u0439")&&(c=20-hayGiven(),g=15-oatsGiven());if(-1!==b.indexOf("haySlider")){var f=document.getElementById("haySlider").getElementsByTagName("li");a=
-c;f[a].className+=" selected";f[a].click();f=document.getElementById("haySlider-sliderHidden");f.setAttribute("value",a);a=!0}-1!==b.indexOf("oatsSlider")&&(f=document.getElementById("oatsSlider").getElementsByTagName("li"),a=g,f[a].className+=" selected",f[a].click(),f=document.getElementById("oatsSlider-sliderHidden"),f.setAttribute("value",a),a=!0);!1===a&&(-1!==b.indexOf('id="feedingHay"')&&(document.getElementById("feedingHay").options[c].selected=!0),-1!==b.indexOf('id="feedingOats"')&&(document.getElementById("feedingOats").options[g].selected=
-!0))}}}
-function doEatNorm(){if(-1!==document.body.innerHTML.indexOf("boutonAllaiter"))document.getElementById("boutonAllaiter").click();else{var a=!1,b=document.getElementById("feeding").innerHTML,c=hayToGive(),g=oatsToGive();if(0!==c+g&&-1===b.indexOf("\u0442\u043e\u043b\u0441\u0442")){-1!==b.indexOf("\u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u044b\u0439")&&(c=20-hayGiven(),g=15-oatsGiven());if(-1!==b.indexOf("haySlider")){var f=document.getElementById("haySlider").getElementsByTagName("li");a=
-c;f[a].className+=" selected";f[a].click();f=document.getElementById("haySlider-sliderHidden");f.setAttribute("value",a);a=!0}-1!==b.indexOf("oatsSlider")&&(f=document.getElementById("oatsSlider").getElementsByTagName("li"),a=g,f[a].className+=" selected",f[a].click(),f=document.getElementById("oatsSlider-sliderHidden"),f.setAttribute("value",a),a=!0);!1===a&&(-1!==b.indexOf('id="feedingHay"')&&(document.getElementById("feedingHay").options[c].selected=!0),-1!==b.indexOf('id="feedingOats"')&&(document.getElementById("feedingOats").options[g].selected=
-!0));b=document.getElementById("feed-button");null!==b&&b.click()}}}function hayToGive(){var a=1*hayNorm()-1*hayGiven();0>a&&(a=0);20<a&&(a=20);return a}function oatsToGive(){if(-1!==document.getElementById("feeding").outerHTML.indexOf("oats")||-1!==document.getElementById("feeding").outerHTML.indexOf("Oats")){var a=1*oatsNorm()-1*oatsGiven();0>a&&(a=0);15<a&&(a=15);return a}return 0}
-function hayNorm(){return document.getElementsByClassName("section-fourrage section-fourrage-target")[0].childNodes[0].nodeValue}function hayGiven(){var a=document.getElementsByClassName("float-right section-fourrage section-fourrage-quantity")[0].outerHTML;return a.substring(a.indexOf("/ <strong class")-3,a.lastIndexOf("/ <strong class"))}function oatsNorm(){return document.getElementsByClassName("section-avoine section-avoine-target")[0].childNodes[0].nodeValue}
-function oatsGiven(){var a=document.getElementsByClassName("float-right section-avoine section-avoine-quantity")[0].outerHTML;return a.substring(a.indexOf("/ <strong class")-3,a.lastIndexOf("/ <strong class"))}function reload(){location.reload()}function groom(){var a=document.getElementById("boutonPanser");null!==a&&a.click()}function sleep(){var a=document.getElementById("boutonCoucher");null!==a&&a.click()}function stroke(){var a=document.getElementById("boutonCaresser");null!==a&&a.click()}
-function carrot(){var a=document.getElementById("boutonCarotte");null!==a&&a.click()}function drink(){var a=document.getElementById("boutonBoire");null!==a&&a.click()}function mash(){var a=document.getElementById("boutonMash");null!==a&&a.click()}function prev(){var a=document.getElementById("nav-previous");null!==a&&a.hasAttribute("href")&&a.click()}function OR(){var a=document.getElementById("age").getElementsByTagName("button");null!==a[0]&&a[0].click()}
-function giveName(){var a=0+getRandomPause(shortPause1,shortPause2);setTimeout(function(){document.getElementById("widget--1").click()},a);a+=getRandomPause(shortPause1/4,shortPause2/4);setTimeout(function(){document.getElementsByClassName("options-menu")[0].getElementsByClassName("first")[0].getElementsByTagName("a")[2].click()},a);a+=getRandomPause(shortPause1,shortPause2);setTimeout(function(){var a=document.getElementById("horseNameName");(""+getMyParameterByName(genetics[0])).split(".");a.value=
-("masculin"===chevalSexe?polM:polJ)+" "+(enduranceGenetique+vitesseGenetique+dressageGenetique+galopGenetique+trotGenetique+sautGenetique).toFixed(2)},a);a+=getRandomPause(shortPause1/4,shortPause2/4);setTimeout(function(){document.getElementById("horseNameAffixe").getElementsByTagName("optgroup")[1].getElementsByTagName("option")[0].setAttribute("selected","selected")},a);a+=getRandomPause(shortPause1,shortPause2);setTimeout(function(){document.getElementById("profil-popup-content").getElementsByClassName("spacer-small-top button button-style-0")[0].click()},
-a)}function createCookie(a,b){document.cookie=a+"="+b+";expires: 800 "}function readCookie(a){a=("; "+document.cookie).split("; "+a+"=");if(2===a.length)return a.pop().split(";").shift()}function eraseCookie(a){createCookie(a,";expires: -1")}function getGlobalParameterByName(a){return window[a]}function getMyParameterByName(a){var b="";try{b=eval(a)}catch(c){}return b}function pauseFunc(){document.body.innerHTML.indexOf("chevalId")}function trim(a,b){return ltrim(rtrim(a,b),b)}
-function ltrim(a,b){return a.replace(new RegExp("^["+(b||"\\s")+"] + ","g"),"")}function rtrim(a,b){return a.replace(new RegExp("["+(b||"\\s")+"] + $","g"),"")}function getRandomPause(a,b){return Math.random()*(b-a)+a}function openFeeding(){-1===document.body.innerHTML.indexOf("boutonAllaiter")&&document.getElementById("boutonNourrir").click()}
-function eqCenterReg(){if(-1!==document.body.innerHTML.indexOf("cheval-inscription")){var a=document.getElementById("cheval-inscription").firstChild;null!==a&&a.click()}}/www.lowadi.com\/elevage\/chevaux\/centreInscription\?id=/.test(window.location.href)&&viborksk();
-function \u043a\u0441\u043a\u0440\u0435\u0437\u0435\u0440\u0432(){var a=0+getRandomPause(2200,2600);setTimeout(eqCenterReg2,a);a+=getRandomPause(2800,3200);setTimeout(eqCenterReg3,a);a+=getRandomPause(3500,3800);setTimeout(eqCenterReg4,a)}function eqCenterReg2(){var a=document.getElementById("tab-box-reserve").getElementsByTagName("a");console.log(a[0]);a[0].click()}
-function eqCenterReg3(){for(var a=document.getElementById("boxContent").getElementsByTagName("tbody")[0].getElementsByTagName("tr"),b=1;b<a.length;b++)if(localisation=a[b].getElementsByClassName("align-left width-19")[0].getElementsByTagName("a")[0].className,localisation==="centerLocalisation "+centerLocalisation){var c=a[b].getElementsByClassName("align-center")[0].outerHTML,g=c.search("abreuvoir");if(0<g&&(c=c.substring(g),g=c.search("douche"),0<g))for(c=a[b].getElementsByClassName("align-center align-middle spacer-small-left spacer-small-right")[dl].getElementsByTagName("button"),
-g=0;g<c.length;g++)if(void 0===a[b].getElementsByClassName("align-center align-middle spacer-small-left spacer-small-right")[dl].getElementsByClassName("disabled button button-style-8")[0]){c[g].click();return}}}function eqCenterReg4(){!0!==/message=centreOk/.test(window.location.href)&&location.reload()}
-function ksk_ALL(){var a=0+getRandomPause(2E3,2500);setTimeout(\u041a\u0421\u041a_O,a);a+=getRandomPause(2E3,2800);setTimeout(\u041a\u0421\u041a1,a);a+=getRandomPause(2200,2800);setTimeout(\u041a\u0421\u041a2,a)}
-function \u041a\u0421\u041a_O(){document.getElementById("abreuvoir").setAttribute("value","1");document.getElementById("douche").setAttribute("value","1");document.getElementById(spec).setAttribute("value","1");document.getElementsByClassName("module module-style-20 module-css").nextElementSibling[0].click()}function \u041a\u0421\u041a1(){var a=document.getElementsByClassName("grid-cell spacer-small-top spacer-small-bottom")[dl].getElementsByTagName("a");getRandomPause(1E3,1300);a[0].click()}
-function \u041a\u0421\u041a2(){var a=document.getElementsByClassName("odd highlight")[0].getElementsByTagName("button")[dl];window.oldConfirm=window.confirm;window.confirm=function(){return!0};a.click();window.confirm=window.oldConfirm};
+function murmurhash(key, seed) {
+	var remainder, bytes, h1, h1b, c1, c1b, c2, c2b, k1, i;
+	
+	remainder = key.length & 3; // key.length % 4
+	bytes = key.length - remainder;
+	h1 = seed;
+	c1 = 0xcc9e2d51;
+	c2 = 0x1b873593;
+	i = 0;
+	
+	while (i < bytes) {
+	  	k1 = 
+	  	  ((key.charCodeAt(i) & 0xff)) |
+	  	  ((key.charCodeAt(++i) & 0xff) << 8) |
+	  	  ((key.charCodeAt(++i) & 0xff) << 16) |
+	  	  ((key.charCodeAt(++i) & 0xff) << 24);
+		++i;
+		
+		k1 = ((((k1 & 0xffff) * c1) + ((((k1 >>> 16) * c1) & 0xffff) << 16))) & 0xffffffff;
+		k1 = (k1 << 15) | (k1 >>> 17);
+		k1 = ((((k1 & 0xffff) * c2) + ((((k1 >>> 16) * c2) & 0xffff) << 16))) & 0xffffffff;
+
+		h1 ^= k1;
+        h1 = (h1 << 13) | (h1 >>> 19);
+		h1b = ((((h1 & 0xffff) * 5) + ((((h1 >>> 16) * 5) & 0xffff) << 16))) & 0xffffffff;
+		h1 = (((h1b & 0xffff) + 0x6b64) + ((((h1b >>> 16) + 0xe654) & 0xffff) << 16));
+	}
+	
+	k1 = 0;
+	
+	switch (remainder) {
+		case 3: k1 ^= (key.charCodeAt(i + 2) & 0xff) << 16;
+		case 2: k1 ^= (key.charCodeAt(i + 1) & 0xff) << 8;
+		case 1: k1 ^= (key.charCodeAt(i) & 0xff);
+		
+		k1 = (((k1 & 0xffff) * c1) + ((((k1 >>> 16) * c1) & 0xffff) << 16)) & 0xffffffff;
+		k1 = (k1 << 15) | (k1 >>> 17);
+		k1 = (((k1 & 0xffff) * c2) + ((((k1 >>> 16) * c2) & 0xffff) << 16)) & 0xffffffff;
+		h1 ^= k1;
+	}
+	
+	h1 ^= key.length;
+
+	h1 ^= h1 >>> 16;
+	h1 = (((h1 & 0xffff) * 0x85ebca6b) + ((((h1 >>> 16) * 0x85ebca6b) & 0xffff) << 16)) & 0xffffffff;
+	h1 ^= h1 >>> 13;
+	h1 = ((((h1 & 0xffff) * 0xc2b2ae35) + ((((h1 >>> 16) * 0xc2b2ae35) & 0xffff) << 16))) & 0xffffffff;
+	h1 ^= h1 >>> 16;
+
+	return h1 >>> 0;
+}
+
+
+
+function is_lic()
+{
+ /* Logins */
+var l = ["661228372", "606006511"];
+var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
+var lic = false;
+
+ 	for (var h=0; h<l.length; h++)
+ 		{
+ 			if (l[h] === myhash) lic = true;	
+ 		}
+ return lic;		
+ 		
+}
+
+
+
+
+//------- Переменные -------
+
+var walk1 = 'montagne';
+var walk2= 'foret';
+var train1 = 'vitesse';
+var train2 = 'dressage';
+var train3 = 'trot';
+
+var polM ='м'; 
+var polJ ='ж';
+
+var spec = 'montagne'; //специализация кск с общих
+
+var viborksk =  ksk_ALL; //НАСТРОЙКА , КАКОЙ КСК БЕРЕМ. резерв или с общих: ksk_ALL-с общий с душем и поилкой,   kskreserv- резерв
+
+var dl =1;//НАСТРОЙКА ДЛИТЕЛЬНОТИ КСК:0- на 1 день, 1- на 3 дня
+
+var shortPause1 = 20;//можно не трогать. на скорость ощутимо не влияет . 
+var shortPause2 = 40;
+var mediumPause1 =400;// СКОРОСТЬ кача, если медленно. можно уменьшить паузы.Есличасто дрожжит- увеличить. mediumPause1 должна быть меньше mediumPause2
+var mediumPause2 = 500;
+var longPause1 = 550;//тоже скорость кача. Принцип. как и в средних(medium) паузах
+var longPause2 = 650;
+
+var nav=0; //докач навов. 0 - да, 1- нет
+var mol = 360;//НАСТРОЙКА, возраст, когда рожаем под молнию,даже если транс- в месяцах. 180=15 лет
+
+var centerLocalisation = 'centerLocalisationMontagne'; // centerLocalisationForet или centerLocalisationMontagne
+var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
+
+var HayToGive = 12;
+var OatsToGive = 10;
+
+if (typeof e1 !=="undefined"){
+    var enduranceTComplet = e1;
+    var vitesseTComplet = e2;
+    var dressageTComplet = e3;
+    var galopTComplet = e4;
+    var trotTComplet = e5;
+    var sautTComplet = e6;
+
+    var foretComplet = b3;
+    var montagneComplet = b1;
+}
+    
+var genetics = ['galopGenetique'];
+var lastParentPage = "";
+var lastParentSex = "";
+var offersToBeDone = 10;
+var offers = "offers" + getMyParameterByName(genetics[0]);
+var doAbort = "doAbort" + getMyParameterByName(genetics[0]);
+if(readCookie (doAbort) === undefined){
+    console.log("!!!"+readCookie (doAbort) );
+    createCookie(doAbort,false);
+}
+
+if(readCookie (offers) === "" || readCookie (offers) === undefined ){
+    createCookie (offers, 0);
+}
+
+var specialisation = 'specialisationClassique'; 
+var amSpecialisation = 'classique'; 
+var amunitionEquiped = 'amunitionEquiped' + getMyParameterByName(['sautGenetique'][0]);
+
+var compName = 'trot'; 
+
+
+
+if (typeof vitesseComplet !=="undefined"){ 
+    var compComplet  = vitesseComplet;
+}
+if (typeof trotComplet !=="undefined"){ 
+    var compComplet1  = trotComplet;
+}
+if (typeof dressageComplet !=="undefined"){
+    var compComplet2  = dressageComplet;
+}	
+	
+
+
+ if (window.self != window.top)
+ {
+    throw "stop";
+ }
+var pause_reload=40000;
+setTimeout( reload,pause_reload);
+if (/www.lowadi.com\/elevage\/chevaux\/\?elevage=all-horses/.test(window.location.href))
+{
+      history.go(-2);
+}
+
+//------- Переменные -------
+if (/\/marche\/noir\/object\?qName=/.test(window.location.href))
+ {
+       
+     var pause=getRandomPause(longPause1*2,longPause2*2);
+            setTimeout(st,pause);
+    var pause1 =  pause+ getRandomPause(longPause1*2,longPause2*2);
+   setTimeout( doR,pause1);
+    }
+
+if (/\/elevage\/chevaux\/cheval\?id=/.test(window.location.href))
+{
+	 if (is_lic()===true)
+	{
+		console.log('License:'+myhash);
+         var sante = document.getElementById('sante').textContent;
+            if (sante > 80)
+            {    
+                if (chevalAge<=6)
+                {
+                  if(chevalSexe === getLastParentSex())
+                {
+                     zeus();
+                        
+                    }   
+                 else  if(chevalNom.indexOf(".") === -1){
+                      
+                         eraseCookie(amunitionEquiped);
+                        giveName();
+                        
+                    } 
+                    else {                    
+                 
+                  ORProg();
+                    }
+                } 
+                else if (chevalAge>6 && chevalAge<=16)
+                {
+                   
+                     ORProg();
+                }  
+                
+                else 
+                {
+				
+                 MyTrain();	  
+                }
+			}
+	}
+else alert('Ваша лицензия не активирована! Для активации сообщите продавцу следующую информацию - ID:'+myhash);	
+}
+
+
+function ORProg()
+{
+ var pause = getRandomPause(shortPause1,shortPause2);
+   setTimeout(f1,pause);
+     function f1()
+    {
+         if (/elevage\/chevaux\/centreInscription\?id=/.test(document.body.innerHTML))
+    {
+        var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(eqCenterReg,pause);
+            var pause1=pause+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f1,pause1);
+   
+    }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f2,pause1);
+        }      
+    } 
+     function f2()
+    {
+       var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause3);
+        }      
+    } 
+    function f3()
+    {
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d1=document.getElementById('feeding');
+        var d2=-1;
+        if (d1 !== null) {d2=d1.innerHTML.indexOf('толст');}
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined) || (d2 !== -1) || (d0[0] !== undefined))
+        {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            
+            var pause5=getRandomPause(shortPause1,shortPause2);
+            setTimeout(doEatNorm,pause5);
+            var pause6=pause5+getRandomPause(longPause1,longPause2);
+            setTimeout(f3,pause6);
+        }
+    }
+      function f5()
+    {
+        var n=document.getElementById('energie').innerHTML;
+      if (n < 20) {
+       var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f5,pause3);
+        } 
+          } 
+          else
+        {
+           var pause4=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause4);
+        }
+    }
+  
+    // Спать action action-style-4 coucher action-disabled
+         function f7()
+    {
+        var d=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+          var d1=document.getElementsByClassName('action action-style-4 coucher action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+            var pause11=pause1+getRandomPause(longPause1,longPause2);
+            setTimeout(pauseFunc,pause11);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    }
+ 
+}
+
+
+
+function MyTrain(){ 
+    if (chevalAge>16 && chevalAge<=22)
+    {
+        OatsToGive = 12;
+        Walks1(walk1); 
+    }
+ 
+    else if (getMyParameterByName(train2 + 'TComplet')<100 ) 
+    { 
+       OatsToGive = 12;
+       HayToGive = 14;
+        Train(train2); 
+          
+    }
+   
+ 
+      else if  ((document.getElementsByClassName('action action-style-4 competition-galop action'))[0] === undefined) {
+
+    EquipAmunition(); 
+
+    }
+  
+     else if (getMyParameterByName(train1 + 'TComplet')<100 ) 
+    { 
+        OatsToGive = 12;
+        Train(train1);         
+    }
+
+  else if (getMyParameterByName(walk1 + 'Complet')<100) 
+    {
+         HayToGive = 12;
+        OatsToGive = 14;
+        Walks(walk1); 
+    }
+	
+     else if (!compComplet) 
+    {
+     HayToGive = -1;
+        OatsToGive = 10;     
+         CompNoVIP(); 
+       }
+	   
+      else if (getMyParameterByName(train3 + 'TComplet')<100) 
+    {   
+          OatsToGive = 12;
+       HayToGive = 14;
+        Train(train3);     
+        }
+		
+  	else if (chevalAge<124)
+				{
+					//alert();
+					HayToGive = 12;
+					OatsToGive = 14;
+					 setTimeout(function() {walk(walk2);}, 400); 
+					 setTimeout(drink,1000);
+					 setTimeout(function() {ORProg();}, 1300); 
+					 
+				}
+	
+
+	
+    else 
+    {
+        if (chevalSexe === "feminin"){
+            BirthProg();
+        }
+        else if (chevalSexe === "masculin" && parseInt(readCookie(offers),10) < offersToBeDone){
+            GiveOfferings(5);
+   
+        }
+        else if (chevalSexe === "masculin" && parseInt(readCookie(offers),10) === offersToBeDone){
+            eraseCookie(offers);
+            GoToMother();
+        } 
+    }
+
+}
+
+
+
+function zeus(){
+   var regexp = /id=([^&]+)/i;
+    var GetValue = '';
+     GetValue = regexp.exec(document.location.search)[1];
+ window.location='http://www.lowadi.com/marche/noir/object?qName=eclair-zeus&cheval='+ GetValue ;
+}
+ function doR(){
+    var d = document.getElementsByClassName('button button-style-2');
+ d[0].click();
+}
+function st()/////////////////////////////////////
+{
+    var d = document.getElementById('inventaire-utilisation-standard');
+    if(d!== null)
+    {
+        d.click();
+    }
+}
+
+
+function GiveOfferings(offerings){
+ 
+  var pause = getRandomPause(shortPause1,shortPause2);
+    setTimeout(f1,pause);
+   
+    function f1()
+    {
+        var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f2,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f1,pause3);
+        }      
+    }  
+      function f2()
+    {
+      
+   if( (timeConvert() >800  )&&( timeConvert() <1200  ))
+       {
+          var pause=getRandomPause(shortPause1,shortPause2);   
+       
+         setTimeout(function() { competitionByName1();}, pause);    
+        pause=pause +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause);  
+        }
+        else
+        {
+            
+            var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f22,pause3);
+        }      
+    }  
+  function f22()
+    {
+      
+   if( timeConvert() < 540 )
+       {
+          var pause=getRandomPause(shortPause1,shortPause2);   
+         setTimeout(giveOfferForTeam, pause);
+       
+         pause=pause +getRandomPause(longPause1*2,longPause2*2);
+            setTimeout(f22,pause);  
+        }
+        else
+        {
+            
+            var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause3);
+        }      
+    }  
+    function f3()
+    {
+          var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f4,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f3,pause3);
+        }      
+    } 
+    function f4()
+    {
+        
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined)  || (d0[0] !== undefined))
+        {
+            // Спать
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            var pause4=getRandomPause(shortPause1,shortPause2);
+            setTimeout(openFeeding,pause4);
+            var pause5=pause4+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(doEatDef,pause5);
+            var pause6=pause5+getRandomPause(longPause1,longPause2);
+            setTimeout(f4,pause6);
+        }
+    }
+ function f5()
+    {
+   var n=document.getElementById('energie').innerHTML;
+        if ((n > 22)&&( timeConvert() <800  ))
+       {
+          var pause=getRandomPause(shortPause1,shortPause2);   
+         setTimeout(giveOfferForTeam, pause);
+          
+         pause=pause +getRandomPause(longPause1*3,longPause2*3);
+            setTimeout(f5,pause);  
+        }
+        else
+        {
+            
+            var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f99,pause3);
+        }      
+    } 
+     function f99()
+    {
+       var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+   if( (timeConvert() > 1100 )||((d[0] !== undefined)||(d1[0] !== undefined)))
+       {
+         
+            var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause3);
+             
+        }
+        else
+        {
+             console.log("offers=" + readCookie(offers));
+    createCookie(offers, parseInt(readCookie(offers),10) + offerings);
+    console.log("offers=" + readCookie(offers));
+            var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause3);
+        }      
+    }    
+    
+        function f7()
+    {
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f8,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    }
+        function f8()
+    {
+      var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+         if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f9,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(carrot,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f8,pause3);
+        }      
+    } 
+    
+  
+    // Спать
+         function f9()
+    {
+         var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+        var d2=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+        if(((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined))&&(parseInt(readCookie(offers),10) === offersToBeDone)))
+       {
+             eraseCookie(offers); 
+           GoToMother();
+        }
+           else  if((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined)))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+            var pause11=pause1+getRandomPause(longPause1*3,longPause2*3);
+            setTimeout(pauseFunc,pause11);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(longPause1*3,longPause2*3);
+            setTimeout(f9,pause3);
+        }      
+    }
+  
+   
+}
+function GoToMother(){
+    var d = document.getElementsByClassName('horsename')[1].href;
+    document.location.replace('http://www.lowadi.com/elevage/chevaux/cheval?id=' + d.substring(d.search("=") + 1)); 
+}
+function giveOfferForTeam(){
+    var pause = 0;
+    // Открыть случки
+    var pause1 = pause + getRandomPause(mediumPause1,mediumPause2);
+    setTimeout(openReproduction,pause1);
+    // Выбрать командные
+    var pause2 = pause1 + getRandomPause(mediumPause1,mediumPause2);
+    setTimeout(selectTeamOffers,pause2);
+    // Кинуть случку
+    var pause3 = pause2+getRandomPause(mediumPause1,mediumPause2);
+    setTimeout(doOffer,pause3);
+    var pause4=pause2+getRandomPause(longPause1,longPause2);
+    setTimeout(pauseFunc,pause4);
+}
+function selectTeamOffers(){
+    document.getElementById('formMalePublicTypeEquipe').click();
+}
+function doOffer(){
+  document.getElementById('boutonMaleReproduction').click();
+
+}
+//------- Жеребцы -------
+
+
+// Конвертация времени
+function timeConvert(){
+    var d = document.getElementsByClassName('hour');
+    var timeStr = d.item(0).innerHTML;
+    var hours = parseInt(timeStr.substring(0,3));
+    var minutes = parseInt(timeStr.substring(3));
+    return hours * 60 + minutes;
+}
+
+//------- Роды -------
+function BirthProg(){
+  
+    console.log(doAbort + "=" + readCookie(doAbort));
+    var b =((document.getElementById('alerteVeterinaireContent')!==null) &&( (readCookie(doAbort)===0) || (chevalAge>mol)));
+    console.log("Условие родить = " + b);
+    if(b){ 
+     
+          var j=document.getElementById('lienVeterinaire');
+    j.click(); 
+    }
+         else if  (timeConvert() >800  )
+    {
+      
+          var pause1=getRandomPause(mediumPause1,mediumPause2);
+            setTimeout( ORProg,pause1);
+      
+        }    
+	 else if  (nav===0 )
+    {
+       var pause = getRandomPause(shortPause1,shortPause2);
+        setTimeout(openReproduction,pause);
+        var pause1=pause+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout( Train1,pause1);     
+        }	
+    else{
+      var pause = getRandomPause(shortPause1,shortPause2);
+        setTimeout(openReproduction,pause);
+        var pause1=pause+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout( ORProg,pause1);  
+      }
+}    
+
+ function Train1() //докачка треней на родах
+    {
+        var d=document.getElementsByClassName('action action-style-4 competition-galop action-disabled');
+        if (d[0] !== undefined)
+       {
+           ORProg();
+        } 
+       else if (getMyParameterByName(walk2 + 'Complet')<100)//65
+    {
+         HayToGive = 14;
+        OatsToGive = 12;
+        WalksBirth(walk2);
+    }
+    else if (getMyParameterByName('endurance' + 'TComplet')<100){
+          OatsToGive = 12;
+        HayToGive = -1;
+        Train('endurance');
+        } 
+   
+        else if (getMyParameterByName('galop' + 'TComplet')<100){
+          OatsToGive = 12;
+        
+        Train('galop');
+        }  
+  else if (getMyParameterByName('saut' + 'TComplet')<100){
+          OatsToGive = 12;
+        
+        Train('saut');
+        }        
+  else {    
+ORProg();
+    } 
+}
+
+function openReproduction(){
+    if (document.getElementById('reproduction-bottom')!==null)
+    {
+        var d1 = document.getElementById('reproduction-tab-0').getElementsByTagName('a')[1]; 
+        //console.log(d1);
+        d1.click();
+        if(d1.className.indexOf("action action-style-4 echographie") != -1){
+            var childSexe = "";
+            var pause = getRandomPause(shortPause1,shortPause2);
+            setTimeout(function(){                
+                var d = document.getElementById('reproduction-tab-1').getElementsByClassName('col-1');
+                console.log(d);
+                var s = d[0].childNodes[0].nodeValue;
+                console.log(s);
+                if(s.indexOf("жереб") != -1){
+                    childSexe = "masculin";}
+                else{
+                    childSexe = "feminin";}
+                console.log("childSexe=" + childSexe);               
+                lParentSex = getLastParentSexForBirth(); 
+                console.log("!!getLastParentSexForBirth=" + getLastParentSexForBirth());
+                if(lParentSex === childSexe){
+                    createCookie(doAbort,1);}
+                else{
+                    createCookie(doAbort,0);}
+                console.log("openReproduction/doAbort=" +readCookie(doAbort));
+
+            },pause); 
+        }
+    }
+}
+function reserve(){
+    var d = document.getElementById('tab-1');
+    if(d.className != 'tab-style-6-0-0 selected')
+    {
+        var d1 = document.getElementsByClassName('tab-action');
+        d1[1].click();
+    }
+    
+}
+function doReproduction(){ 
+    var d = document.getElementsByClassName('button button-style-0');
+  document.getElementById('race').options[22].selected = true;
+  // document.getElementById('licorne-aileeCheckbox').setAttribute('value','0'); 
+  // document.getElementById('licorneCheckbox').setAttribute('value','0');  
+  if (document.getElementById('race').options[22].selected = true){    
+ d.item(0).click();     
+}
+}
+function doReproduction2(){
+    var d = document.getElementsByClassName('button button-style-0');
+ d[1].click();
+}
+if (/www.lowadi.com\/elevage\/chevaux\/choisirNoms\?jument=/.test(window.location.href)){
+    if (document.body.innerHTML.indexOf('femelle_v1828806360.png') !== -1)
+    {
+        document.getElementById('poulain-1').setAttribute('value','Кобыла');
+    }
+    else document.getElementById('poulain-1').setAttribute('value','Жеребенок');
+    var d = document.getElementsByTagName('button');
+    if (d[d.length-1].getAttribute('type')=='submit')
+    {
+        d[d.length-1].click();
+    }
+    
+}
+if (/www.lowadi.com\/elevage\/chevaux\/saillie\?offre=/.test(window.location.href)){
+
+  var pause =  getRandomPause(longPause1,longPause2);
+    setTimeout(function (){ document.getElementById('boutonDoReproduction').click();},pause);}
+if (/www.lowadi.com\/elevage\/chevaux\/rechercherMale\?jument=/.test(window.location.href)){  
+ var pause = getRandomPause(longPause1*2,longPause2*2);
+ setTimeout(reserve,pause);
+var pause1 =  pause+ getRandomPause(longPause1*2,longPause2*2);
+   setTimeout( doReproduction,pause1);
+var pause2=  pause1+ getRandomPause(longPause1*2,longPause2*2);
+   setTimeout( doReproduction2,pause2);  
+   
+}
+//------- Роды -------
+
+//------- Выборка -------
+function loadURL(url){
+    var oRequest = new XMLHttpRequest();
+    oRequest.open('GET', url, false);
+    oRequest.send(null);
+    return oRequest.responseText;
+}
+function getGenetics(geneticsName){
+    document.getElementById('tab-genetics-title').onclick();
+    return document.getElementById(geneticsName).childNodes[0].nodeValue;
+}
+function getLastParent(){  
+    if (lastParentPage === "")
+    {
+        var d = document.getElementsByClassName('horsename');
+        console.log(d);
+        var d1 = (d[0].href).substring((d[0].href).search('=')+1);
+        var d2 = (d[d.length-1].href).substring((d[d.length-1].href).search('=')+1); 
+        if (d1>d2)
+        {
+            lastParentPage = "";
+            lastParentPage = loadURL('http://www.lowadi.com/elevage/fiche/?id='+d1);
+        }
+        else 
+        {
+            lastParentPage = "";
+            lastParentPage = loadURL('http://www.lowadi.com/elevage/fiche/?id='+d2);
+        }   
+    }
+    return lastParentPage;      
+}
+function getLastParentSex(){  
+    var d = document.getElementById('tab-genetics').getElementsByClassName('horsename');
+    var d1 = (d[0].href).substring((d[0].href).search('=')+1);
+    var d2 = (d[d.length-1].href).substring((d[d.length-1].href).search('=')+1); 
+    console.log(d1 +";" + d2 + ";" + chevalId);
+    if (d1>d2)
+    {
+        lastParentSex = "masculin";
+    }
+    else 
+    {
+        lastParentSex = "feminin";
+    }   
+    
+    return lastParentSex;      
+}
+function getLastParentSexForBirth(){   
+    var d = document.getElementById('reproduction').getElementsByClassName('horsename');
+    console.log(d);
+    var d0 = (d[0].href).substring((d[0].href).search('=')+1);
+    console.log("d0=" + d0 + "; d=" + chevalId);
+    if(chevalId>d0)
+    {
+        lastParentSexForBirth = "feminin";
+    }
+    else 
+    {
+        lastParentSexForBirth = "masculin";
+    }  
+    console.log("lastParentSexForBirth="+ lastParentSexForBirth);
+    return lastParentSexForBirth;      
+}
+function getLastParentGenetics(geneticsName){
+    var t = getLastParent();
+    var s = t.substring(t.search(geneticsName) + geneticsName.length + 2 );
+    return s.substring(0, s.search('<') );
+}
+//------- Выборка -------
+
+//--------Прогулки-------
+function Walks(walkName)
+{
+    var pause = getRandomPause(shortPause1,shortPause2);
+    
+     setTimeout(f1,pause);
+     function f1()
+    {
+        var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f2,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f1,pause3);
+        }      
+    } 
+   function f2()
+    {
+       var em = document.getElementById('moral').textContent;
+       var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if (( em >99 )||(d[0] !== undefined)||(d1[0] !== undefined))
+       
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause3);
+        }      
+    }
+  function f3()
+    {
+      
+   if( timeConvert() < 840)
+       {
+          var pause=getRandomPause(shortPause1,shortPause2);   
+         setTimeout(function() {competitionByNameVIP(compName);}, pause); 
+         var  pause1=pause +getRandomPause(longPause1,longPause2);
+            setTimeout(f3,pause1);  
+        }
+        else
+        {
+           var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f4,pause3);
+        }      
+    } 
+     
+     function f4()
+    {
+        var d=document.getElementsByClassName('action action-style-4 mash action-disabled');
+        if (d[0] !== undefined)
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(mash,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f4,pause3);
+        }      
+    } 
+     function f5()
+    {
+        var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f6,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f5,pause3);
+        }      
+    }
+
+     function f6()
+    {
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d1=document.getElementById('feeding');
+        var d2=-1;
+        if (d1 !== null) {d2=d1.innerHTML.indexOf('толст');}
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined) || (d2 !== -1) || (d0[0] !== undefined))
+        {
+           
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause1);
+        }
+        else
+        {
+           
+            var pause5=getRandomPause(shortPause1,shortPause2);
+            setTimeout(doEatDef,pause5);
+            var pause6=pause5+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f6,pause6);
+        }
+    }
+ function f7()
+    {
+        var d2=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d21=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+        var n=document.getElementById('energie').innerHTML;
+         if ((d2[0] !== undefined)||(d21[0] !== undefined)||(d[0] !== undefined)||(d1[0] !== undefined)||(n < 10)||( timeConvert() > 1300 ))
+      
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f8,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(function() {walk(walkName);}, pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    } 
+ 
+        function f8()
+    {
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f9,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f8,pause3);
+        }      
+    }
+        function f9()
+    {
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+         if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f91,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(carrot,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f9,pause3);
+        }      
+    }  
+ 
+         function f91()
+    {
+        var d=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+        if (d[0] !== undefined)
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+           var pause11=pause1+getRandomPause(longPause1,longPause2);
+            setTimeout(pauseFunc,pause11);
+           var pause12=pause11+getRandomPause(longPause1*3,longPause2*3);
+            setTimeout(reload,pause12);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f91,pause3);
+        }      
+    }
+  
+
+}
+
+
+function WalksBirth(walkName)
+{
+    var pause = getRandomPause(shortPause1,shortPause2);
+    
+     setTimeout(f1,pause);
+     function f1()
+    {
+        var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f2,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f1,pause3);
+        }      
+    } 
+    function f2()
+    {
+      
+   if( (timeConvert() > 600)|| (chevalAge>36) )
+       {
+         
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f22,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(function() {walk00(walkName,5);}, pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause3);
+        }       
+    } 
+    
+  function f22()
+    {
+      
+   if( timeConvert() > 655 )
+       {
+         
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(function() {walk00(walkName,4);}, pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f22,pause3);
+        }       
+    }  
+     function f3()
+    {
+        var d=document.getElementsByClassName('action action-style-4 mash action-disabled');
+        if (d[0] !== undefined)
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f4,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(mash,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f3,pause3);
+        }      
+    } 
+function f4()
+    {
+         var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f4,pause3);
+        }      
+    } 
+     function f5()
+    {
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d1=document.getElementById('feeding');
+        var d2=-1;
+        if (d1 !== null) {d2=d1.innerHTML.indexOf('толст');}
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined) || (d2 !== -1) || (d0[0] !== undefined))
+        {
+            // Спать
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f6,pause1);
+        }
+        else
+        {
+            
+            var pause5=getRandomPause(shortPause1,shortPause2);
+            setTimeout(doEatDef,pause5);
+            var pause6=pause5+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f5,pause6);
+        }
+    }
+ function f6()
+    {
+        var d2=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d21=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+        var n=document.getElementById('energie').innerHTML;
+         if ((d2[0] !== undefined)||(d21[0] !== undefined)||(d[0] !== undefined)||(d1[0] !== undefined)||(n < 10)||( timeConvert() > 1320 ))
+      
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(function() {walk(walkName);}, pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f6,pause3);
+        }      
+    } 
+ 
+        function f7()
+    {
+        var n=document.getElementById('energie').innerHTML;
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f8,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    }
+        function f8()
+    {
+       var n=document.getElementById('energie').innerHTML;
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+         if ((d[0] !== undefined)||(d1[0] !== undefined)||(n > 20))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f9,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(carrot,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f8,pause3);
+        }      
+    }  
+    // Спать
+         function f9()
+    {
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+        var d2=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+        if((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined)))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+            var pause11=pause1+getRandomPause(longPause1,longPause2);
+            setTimeout(pauseFunc,pause11);
+            var pause12=pause11+getRandomPause(longPause1*2,longPause2*2);
+            setTimeout(reload,pause12);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f9,pause3);
+        }      
+    }
+  
+
+}
+
+
+
+function Walks1(walkName)
+{
+    var pause = getRandomPause(shortPause1,shortPause2);
+    
+     setTimeout(f1,pause);
+     function f1()
+    {
+        var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f2,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f1,pause3);
+        }      
+    } 
+    function f2()
+    {
+      
+   if( (timeConvert() > 600)|| (chevalAge>36) )
+       {
+         
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f21,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(function() {walk00(walkName,5);}, pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause3);
+        }       
+    } 
+	
+    function f21()
+    {
+      
+   if(( timeConvert() < 600 )&& (chevalAge>36) )
+       {
+          var pause=getRandomPause(shortPause1,shortPause2);   
+         setTimeout(function() { competitionByNameVIP(compName);}, pause); 
+          pause=pause +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f21,pause);  
+        }
+        else
+        {
+           var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f22,pause3);
+        }      
+    }
+  function f22()
+    {
+      
+   if( timeConvert() > 655 )
+       {
+         
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(function() {walk00(walkName,4);}, pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f22,pause3);
+        }       
+    }  
+     function f3()
+    {
+        var d=document.getElementsByClassName('action action-style-4 mash action-disabled');
+        if (d[0] !== undefined)
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f4,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(mash,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f3,pause3);
+        }      
+    } 
+function f4()
+    {
+         var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f4,pause3);
+        }      
+    } 
+     function f5()
+    {
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d1=document.getElementById('feeding');
+        var d2=-1;
+        if (d1 !== null) {d2=d1.innerHTML.indexOf('толст');}
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined) || (d2 !== -1) || (d0[0] !== undefined))
+        {
+            // Спать
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f6,pause1);
+        }
+        else
+        {
+            
+            var pause5=getRandomPause(shortPause1,shortPause2);
+            setTimeout(doEatDef,pause5);
+            var pause6=pause5+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f5,pause6);
+        }
+    }
+ function f6()
+    {
+        var d2=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d21=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+        var n=document.getElementById('energie').innerHTML;
+         if ((d2[0] !== undefined)||(d21[0] !== undefined)||(d[0] !== undefined)||(d1[0] !== undefined)||(n < 10)||( timeConvert() > 1320 ))
+      
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(function() {walk(walkName);}, pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f6,pause3);
+        }      
+    } 
+ 
+        function f7()
+    {
+        var n=document.getElementById('energie').innerHTML;
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f8,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    }
+        function f8()
+    {
+       var n=document.getElementById('energie').innerHTML;
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+         if ((d[0] !== undefined)||(d1[0] !== undefined)||(n > 20))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f9,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(carrot,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f8,pause3);
+        }      
+    }  
+    // Спать
+         function f9()
+    {
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+        var d2=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+        if((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined)))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+            var pause11=pause1+getRandomPause(longPause1,longPause2);
+            setTimeout(pauseFunc,pause11);
+            var pause12=pause11+getRandomPause(longPause1*2,longPause2*2);
+            setTimeout(reload,pause12);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f9,pause3);
+        }      
+    }
+  
+
+}
+function walk00(walkName, trainTime1)//////////////////errorsBox
+    {
+ var en = document.getElementById('energie').textContent;
+ var tTime1=timeConvert();
+    var trainTime0= Math.floor((1360-tTime1)/30); 
+  var spans;
+    var trains;
+    var hidden;
+    switch (walkName) {
+        case 'foret':
+            spans = document.getElementById('walkforetSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('walkforetSlider-sliderHidden');
+            trains = document.getElementById('walk-foret-submit'); 
+            break;
+        case 'montagne':
+            spans = document.getElementById('walkmontagneSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('walkmontagneSlider-sliderHidden');
+            trains = document.getElementById('walk-montagne-submit'); 
+            break;
+       
+    }
+
+     if (trainTime1 <= trainTime0 )  
+      {
+      trainTime= trainTime1; 
+ }
+    else{
+      trainTime= trainTime0; 
+ }
+        
+  for (var i =  trainTime; i >= 0; i--) 
+ 
+  {
+        if ((spans[i].className !== "green hiddenNumber disabled")&&(spans[i].className !== "green disabled"))
+       {
+      spans[i].className = spans[i].className + " selected"; 
+    spans[i].click();    
+    hidden.value = i;
+
+    spans[i].click();
+    trains.click(); 
+     return;     
+ }
+    } 
+    }
+function walk(walkName)//////////////////
+    {
+ var en = document.getElementById('energie').textContent;
+ var trainTime1 = 20;
+   var trainTime;
+     var tTime1=timeConvert();
+    var trainTime0= Math.floor((1380-tTime1)/30);    
+  var spans;
+    var trains;
+    var hidden;
+    switch (walkName) {
+        case 'foret':
+            spans = document.getElementById('walkforetSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('walkforetSlider-sliderHidden');
+            trains = document.getElementById('walk-foret-submit'); 
+            break;
+        case 'montagne':
+            spans = document.getElementById('walkmontagneSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('walkmontagneSlider-sliderHidden');
+            trains = document.getElementById('walk-montagne-submit'); 
+            break;
+       
+    }
+ if (trainTime1 <= trainTime0 )  
+      {
+      trainTime= trainTime1; 
+ }
+    else{
+      trainTime= trainTime0; 
+ }
+        
+  for (var i =  trainTime; i >= 0; i--) 
+ 
+  {
+        if ((spans[i].className !== "green hiddenNumber disabled")&&(spans[i].className !== "green disabled"))
+       {
+      spans[i].className = spans[i].className + " selected"; 
+    spans[i].click();    
+    hidden.value = i;
+
+    spans[i].click();
+    trains.click(); 
+     return;     
+ }
+    } 
+    }
+//------- Прогулки -------
+
+
+
+//------- Тренировки -------
+
+function Train(trainName){
+    switch (trainName) {
+      case 'dressage': 
+            Train9(trainName);
+            break;
+      case 'saut':
+           Train3(trainName);
+            break;	
+      case 'vitesse':    
+      case 'trot':
+	   Train7(trainName);
+            break;  
+      case 'endurance': 
+            Train3(trainName);
+            break;	  
+      case 'galop': 
+	  Train3(trainName);
+            break;	
+		         
+    }
+}
+
+function Train9(trainName){ 
+    var pause = getRandomPause(shortPause1,shortPause2);
+       setTimeout( f1,pause);
+    function f1()//чистка
+    {
+         var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout( f2,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout( f1,pause3);
+        }      
+    }  
+    function f2() //сами тренировки
+    {
+    var en = document.getElementById('energie').textContent; 
+     if(( en < 90 )&&( timeConvert() > 670 ))
+       {
+           var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause);
+      }
+    else
+        {
+           var tT = getMyParameterByName('dressage' + 'TComplet');  
+            if(tT<96) {
+           var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train('dressage', 12);},pause1);
+        var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause2);    
+        }   
+         else if (((tT>95)&&( timeConvert() < 670 ))&&((tT>95)&&(en >20)))
+        {
+           var pause=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train('dressage',4);},pause); 
+     var    pause1=pause +getRandomPause(longPause1,longPause2);
+          setTimeout(function() {train('vitesse',3);},pause1); 
+      var   pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);  
+            setTimeout(f2,pause2);  
+        }
+        else
+        {
+            
+            var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause);
+        }       
+      }      
+    }  
+     function f3()//смесь
+    {
+        var d=document.getElementsByClassName('action action-style-4 mash action-disabled');
+        if (d[0] !== undefined)
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f33,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(mash,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f3,pause3);
+        }      
+    }
+     function f33()//поить
+    {
+         var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f4,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f33,pause3);
+        }      
+    } 
+     function f4()
+    {
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d1=document.getElementById('feeding');
+        var d2=-1;
+        if (d1 !== null) {d2=d1.innerHTML.indexOf('толст');}
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined) || (d2 !== -1) || (d0[0] !== undefined))
+        {
+            // Спать
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            
+            var pause5=getRandomPause(shortPause1,shortPause2);
+            setTimeout(doEatDef,pause5);
+            var pause6=pause5+getRandomPause(longPause1,longPause2);
+            setTimeout(f4,pause6);
+        }
+    }
+     function f5()//сами тренировки
+    {
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+      var n = document.getElementById('energie').textContent; 
+      var trainTime = Math.floor((n*10)/74); 
+       if ((n < 30)||(d[0] !== undefined)||(d1[0] !== undefined)||( timeConvert() > 1230 ))
+       {
+           var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f6,pause);
+      }
+        else
+        {
+           var tT = getMyParameterByName('vitesse' + 'TComplet');  
+            if(tT<100) {
+           var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train('vitesse', 12);},pause1);
+        var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f5,pause2);    
+        }   
+         else if (((tT==100)&&( timeConvert() < 1150 ))&&((tT==100)&&(n >20)))
+        {
+           var pause=getRandomPause(shortPause1,shortPause2);   
+         setTimeout(function() {walk(walk2);}, pause); //тут еще прогулка?
+         pause=pause +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f5,pause);  
+        }
+        else
+        {          
+            var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f6,pause);
+        }       
+      }      
+    }  
+     
+        function f6()// Ласка
+    {
+       var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f6,pause3);
+        }      
+    }
+        function f7()//Морковь
+    {
+         var n = document.getElementById('energie').textContent;
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+         if ((n > 19)||(d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f8,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(carrot,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    }    
+        function f8()// Спать
+    {
+          var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+        var d2=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+        if((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined)))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+           var pause11=pause1+getRandomPause(longPause1,longPause2);
+            setTimeout(pauseFunc,pause11);
+           var pause12=pause11+getRandomPause(longPause1*2,longPause2*2);
+            setTimeout(reload,pause12);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f8,pause3);
+        }      
+    }
+ } 
+
+ function Train7(trainName){
+      var pause = getRandomPause(shortPause1,shortPause2);
+       setTimeout(f1,pause);
+   function f1() //чистка
+    {
+        var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f2,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f1,pause3);
+        }      
+    }     
+   function f2() //тенировка
+    { 
+        var en = document.getElementById('energie').textContent; 
+   if(en < 70)
+       {
+           var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause);
+      }
+        else
+        {
+          var tT = getMyParameterByName(trainName + 'TComplet'); 
+             
+         if(tT<=93) {
+                var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train(trainName, 5);},pause1);
+        var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause2);   
+        }   
+         
+            else if (tT>93)
+        {
+            var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train(trainName, 6);},pause1);
+        var pause2=pause1 +getRandomPause(longPause1,longPause2);
+            setTimeout(f2,pause2);  
+        }
+        else
+        {
+            
+            var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause);
+        }       
+      }      
+    }       
+   function f3() //смесь
+    {
+        var d=document.getElementsByClassName('action action-style-4 mash action-disabled');
+        if (d[0] !== undefined)
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f4,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(mash,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f3,pause3);
+        }      
+    } 
+   function f4() //еда
+    {
+         var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f4,pause3);
+        }      
+    }
+   function f5()
+    {
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d1=document.getElementById('feeding');
+        var d2=-1;
+        if (d1 !== null) {d2=d1.innerHTML.indexOf('толст');}
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined) || (d2 !== -1) || (d0[0] !== undefined))
+        {
+            // Спать
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f6,pause1);
+        }
+        else
+        {
+          
+            var pause5=getRandomPause(shortPause1,shortPause2);
+            setTimeout(doEatDef,pause5);
+            var pause6=pause5+getRandomPause(longPause1,longPause2);
+            setTimeout(f5,pause6);
+        }
+    }
+   function f6() //ласка и тренировка + сорик
+    {
+         var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+      var n = document.getElementById('energie').textContent; 
+  if (((n < 15)||(d[0] !== undefined)||(d1[0] !== undefined))&&( timeConvert() > 1260 ))
+    {
+           var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause);
+      }
+        else
+        {
+           var tT = getMyParameterByName(trainName + 'TComplet'); 
+             
+         if((tT<=93)&&( timeConvert() < 1261 )&&(n >19)) {
+            var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train(trainName, 20);},pause1); //тренировка
+        var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f6,pause2);  
+        }   
+         //если процент тренировки >93 и энергия >20
+            else if (((tT>93)&&( timeConvert() < 1261 ))&&((tT>93)&&(n >20)))
+        {
+           var pause=getRandomPause(shortPause1,shortPause2);   
+         setTimeout(function() {competitionByName1();}, pause); //сорик
+        var pause5=pause +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f6,pause5);  
+        }
+        else
+        {
+            
+            var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause);
+        }       
+      }      
+    } 
+   function f7()
+    {
+        
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f8,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    }
+   function f8()
+    {
+       var n = document.getElementById('energie').textContent;
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+         if ((n > 19)||(d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f9,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(carrot,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f8,pause3);
+        }      
+    }  
+   function f9()// Спать
+    {
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+        var d2=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+        if((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined)))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+          var pause11=pause1+getRandomPause(longPause1,longPause2);
+            setTimeout(pauseFunc,pause11);
+            var pause12=pause11+getRandomPause(longPause1*2,longPause2*2);
+            setTimeout(reload,pause12);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f9,pause3);
+        }      
+    }
+   } 
+
+ function Train3(trainName){
+      var pause = getRandomPause(shortPause1,shortPause2);
+       setTimeout(f1,pause);
+       function f1()
+    {
+        var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f2,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f1,pause3);
+        }      
+    } 
+
+     function f2()
+    {
+     var en = document.getElementById('energie').textContent; 
+   if( timeConvert() > 590 )
+       {
+           var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause);
+      }
+    else
+        {
+           var tT = getMyParameterByName(trainName + 'TComplet');  
+            if(tT<94) {
+             var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train(trainName, 7);},pause1);
+        var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause2);   
+        }   
+         else if (((tT>93)&&( timeConvert() < 600 ))&&((tT>93)&&(en >20)))
+        {
+             var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train(trainName, 6);},pause1);
+        var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause2); 
+        }
+        else
+        {
+            var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause);
+        }       
+      }      
+    } 
+     function f3()
+    {
+        var d=document.getElementsByClassName('action action-style-4 mash action-disabled');
+        if (d[0] !== undefined)
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f4,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(mash,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f3,pause3);
+        }      
+    } 
+ function f4()
+    {
+          var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f4,pause3);
+        }      
+    }
+     function f5()
+    {
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d1=document.getElementById('feeding');
+        var d2=-1;
+        if (d1 !== null) {d2=d1.innerHTML.indexOf('толст');}
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined) || (d2 !== -1) || (d0[0] !== undefined))
+        {
+            // Спать
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f6,pause1);
+        }
+        else
+        {
+            var pause4=getRandomPause(shortPause1,shortPause2);
+            setTimeout(openFeeding,pause4);
+            var pause5=pause4+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(doEatDef,pause5);
+            var pause6=pause5+getRandomPause(longPause1,longPause2);
+            setTimeout(f5,pause6);
+        }
+    }
+  
+    function f6()
+    {
+     var en = document.getElementById('energie').textContent; 
+      var trainTime = Math.floor((en*10)/63); 
+         var tT = getMyParameterByName(trainName + 'TComplet');     
+   if(( en < 30 ) ||( timeConvert() > 1100 )||(tT>91))
+       {
+           var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f66,pause);
+      }
+        else
+        {
+            var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() {train(trainName, trainTime);},pause1);
+        var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f6,pause2);  
+        }      
+    } 
+     function f66()
+    {
+     var en = document.getElementById('energie').textContent; 
+      var trainTime = Math.floor((en*10)/63); 
+         var tT = getMyParameterByName(trainName + 'TComplet');     
+   if(( en < 20 ) ||( timeConvert() > 1200 )||(tT<92))
+       {
+           var pause=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause);
+      }
+        else
+        {
+            var pause1=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() { competitionByName1();}, pause1); 
+        var pause2=pause1 +getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f66,pause2);  
+        }      
+    } 
+    
+    // Ласка
+        function f7()
+    {
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f8,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    }
+        function f8()
+    {
+       var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+         if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f9,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(carrot,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f8,pause3);
+        }      
+    }  
+    // Спать
+         function f9()
+    {
+         var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+        var d2=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+        if((d2[0] !== undefined)&&((d[0] !== undefined)||(d1[0] !== undefined)))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+            var pause11=pause1+getRandomPause(longPause1,longPause2);
+            setTimeout(pauseFunc,pause11);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f9,pause3);
+        }      
+    }
+   
+} 
+
+function train(trainName, trainTime){ 
+    var spans;
+    var trains;
+    var hidden;
+    var trainTime1;
+    var tTime1=timeConvert();
+    var trainTime0= Math.floor((1360-tTime1)/30); 
+  switch (trainName) {
+        case 'endurance':
+            spans = document.getElementById('trainingEnduranceSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('trainingEnduranceSlider-sliderHidden');
+            trains = document.getElementById('training-endurance-submit'); 
+            break;
+        case 'vitesse':
+            spans = document.getElementById('trainingVitesseSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('trainingVitesseSlider-sliderHidden');
+            trains = document.getElementById('training-vitesse-submit'); 
+            break;
+        case 'dressage':
+            spans = document.getElementById('trainingDressageSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('trainingDressageSlider-sliderHidden');
+            trains = document.getElementById('training-dressage-submit');
+            break;
+        case 'galop':
+            spans = document.getElementById('trainingGalopSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('trainingGalopSlider-sliderHidden');
+            trains = document.getElementById('training-galop-submit'); 
+            break;
+        case 'trot':
+            spans = document.getElementById('trainingTrotSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('trainingTrotSlider-sliderHidden');
+            trains = document.getElementById('training-trot-submit'); 
+            break;
+        case 'saut':
+            spans = document.getElementById('trainingSautSlider').getElementsByTagName('li'); 
+            hidden = document.getElementById('trainingSautSlider-sliderHidden');
+            trains = document.getElementById('training-saut-submit'); 
+            break;
+    }
+     if (trainTime <= trainTime0 )  
+      {
+     trainTime1= trainTime; 
+ }
+    else if (trainTime > trainTime0 ) 
+    {
+      trainTime1 = trainTime0; 
+ }
+   
+    for (var i =  trainTime1; i >= 0; i--) 
+   {
+        if ((spans[i].className !== "green hiddenNumber disabled")&&(spans[i].className !== "green disabled"))
+       {
+      spans[i].className = spans[i].className + " selected"; 
+    spans[i].click();    
+    hidden.value = i;
+
+    spans[i].click();
+    trains.click(); 
+     return;     
+ }
+    } 
+}
+
+function EquipAmunition(){
+    var pause1 = pause + getRandomPause(mediumPause1,mediumPause2);
+    setTimeout(specialization,pause1);
+    var pause2 = pause1 + getRandomPause(mediumPause1,mediumPause2);
+    setTimeout(amunition1,pause2);
+    var pause3 = pause2 + getRandomPause(mediumPause1*3,mediumPause2*3);
+    setTimeout(amunition2,pause3);
+   
+}
+function specialization() {
+    var d = document.getElementById(specialisation).getElementsByTagName('button');
+    d[0].click();
+ setTimeout(function() {
+   location.reload();
+ },1500);
+}
+function amunition1() {
+    
+    var d = document.getElementById('competition-body-content').getElementsByTagName('a');
+    console.log(d[0]);
+    d[0].click();
+}
+function amunitionById(idName) {
+    var d = document.getElementById(idName);
+    d.click();
+}
+function amunition2() {
+    var pause = 0;
+    var pause1 = pause + getRandomPause(mediumPause1*4,mediumPause2*4);
+    setTimeout(function() {amunitionById('modele-tapis-'+amSpecialisation+'-1x');},pause1);
+    var pause2 = pause1 + getRandomPause(mediumPause1,mediumPause2);
+    setTimeout(function() {amunitionById('modele-selle-'+amSpecialisation+'-1x');},pause2);
+    var pause3 = pause2 + getRandomPause(mediumPause1,mediumPause2);
+    setTimeout(function() {amunitionById('modele-bride-'+amSpecialisation+'-1x');},pause3);
+    var pause4 = pause3 + getRandomPause(mediumPause1,mediumPause2);
+    setTimeout(function() {
+        var d = document.getElementById('choisir-equipement-popup-content').getElementsByTagName('button');
+        console.log(d[d.length-1]);
+        d[d.length-1].click();
+      
+        if((document.getElementsByClassName('action action-style-4 competition-galop action'))[0] === undefined){
+            var pause5= pause4 + getRandomPause(shortPause1*10,shortPause1*10);
+            setTimeout(function() {
+                location.reload();
+            },pause4);}
+    },pause4);
+   
+}
+
+// Запись на соревнование
+if (/www.lowadi.com\/elevage\/competition\/inscription\?cheval=/.test(window.location.href))
+{ 
+    
+   var  pause2 =  getRandomPause(mediumPause1*2,mediumPause2*2);
+    setTimeout(competitionInscript,pause2);
+     var  pause3 =  pause2 + getRandomPause(mediumPause1*4,mediumPause2*4);
+    setTimeout(competitionInscript,pause3);
+    var  pause4 =  pause2 + getRandomPause(mediumPause1*6,mediumPause2*6);
+    setTimeout( checkComp,pause4);
+    
+}
+
+function competitionInscript(){
+   var d = document.getElementsByClassName('button button-style-0');
+ d.item(0).click(); 
+    } 
+// Проверка
+function checkComp(){
+     var d=document.getElementsByClassName('fieldErrorText into');
+        if (d[0] !== undefined)  
+   
+    {
+        location.reload();
+    }
+}
+
+
+
+//Тут пишем название сорика
+function competitionByName1(){
+    var age=chevalAge; 
+        
+     if   ( !compComplet ) //если 
+     {   
+    competitionByNameVIP('trot');
+    }
+      
+     // else
+    // {   
+   // competitionByNameVIP('trot');
+    //}
+}
+
+
+
+function competitionByName(compName){
+    var d = document.getElementsByClassName('action action-style-4 competition-' + compName);
+    document.location.replace(d.item(0).href);
+}
+function competitionByNameVIP(compName){
+    var d = document.getElementsByClassName('action action-style-4 competition-' + compName).item(0);
+    d.click();
+}
+
+
+
+function CompNoVIP(){ //тут меняется соревнование!!!
+     var pause = getRandomPause(shortPause1,shortPause2);
+       setTimeout(f1,pause);
+     function f1() //чистка
+    {
+       var d=document.getElementsByClassName('action action-style-4 panser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 panser-rainbow action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f2,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(groom,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f1,pause3);
+        }      
+    } 
+   function f2() //поить
+    {        
+       var d=document.getElementsByClassName('action action-style-4 boire action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 boire-fontaine action-disabled');
+        if ((d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f3,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(drink,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f2,pause3);
+        }      
+    }
+    function f3()
+    {
+      
+   if( timeConvert() <700  ) 
+       {
+          var pause=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() { competitionByName1();}, pause); ////// 
+      var  pause1=pause +getRandomPause(longPause1,longPause2);
+            setTimeout(f3,pause1);  
+        }
+        else
+        {           
+            var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f4,pause3);
+        }      
+    } 
+    function f4() //корм спать
+    {
+        // Корм
+        var d0=document.getElementsByClassName('action action-style-4 allaiter action-disabled');
+        var d=document.getElementsByClassName('tab-action tab-action-select action action-style-4 nourrir-entame');
+        if ((d[0] !== undefined)  || (d0[0] !== undefined))
+        {
+            // Спать
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f5,pause1);
+        }
+        else
+        {
+            var pause4=getRandomPause(shortPause1,shortPause2);
+            setTimeout(openFeeding,pause4);
+            var pause5=pause4+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(doEatDef,pause5);
+            var pause6=pause5+getRandomPause(longPause1,longPause2);
+            setTimeout(f4,pause6);
+        }
+    }
+     function f5() 
+    {
+    if( timeConvert() <1290  )//1290
+       {
+          var pause=getRandomPause(shortPause1,shortPause2);   
+        setTimeout(function() { competitionByNameVIP('trot');}, pause);  //сорик
+      var  pause1=pause +getRandomPause(longPause1,longPause2);
+            setTimeout(f5,pause1);  
+        }
+        else
+        {            
+            var pause3=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f7,pause3);
+        }      
+    } 
+         function f7()
+    {
+        var n = document.getElementById('energie').textContent; 
+        var d=document.getElementsByClassName('action action-style-4 caresser action-disabled');
+        var d1=document.getElementsByClassName('action action-style-4 caresser-rainbow action-disabled');
+       if ((n > 20)||(d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f8,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(stroke,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f7,pause3);
+        }      
+    }
+         function f8()
+    {
+          var n = document.getElementById('energie').textContent; 
+        var d=document.getElementsByClassName('action action-style-4 carotte action-disabled');
+         var d1=document.getElementsByClassName('action action-style-4 carotte-rainbow action-disabled');
+         if ((n > 20)||(d[0] !== undefined)||(d1[0] !== undefined))
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(f9,pause1);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(carrot,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f8,pause3);
+        }      
+    }    
+         function f9()// Спать
+    {
+        var d=document.getElementsByClassName('action action-style-4 coucher-box action-disabled');
+        if (d[0] !== undefined)
+       {
+            var pause1=getRandomPause(shortPause1,shortPause2);
+            setTimeout(OR,pause1);
+            var pause11=pause1+getRandomPause(longPause1,longPause2);
+            setTimeout(pauseFunc,pause11);
+           var pause12=pause11+getRandomPause(longPause1*2,longPause2*2);
+            setTimeout(reload,pause12);
+        }
+        else
+        {
+            var pause2=getRandomPause(shortPause1,shortPause2);
+            setTimeout(sleep,pause2);
+            var pause3=pause2+getRandomPause(mediumPause1,mediumPause2);
+            setTimeout(f9,pause3);
+        }      
+    }
+}
+
+
+
+
+
+
+//------- Корм -------
+function doEatDef(){// Корм по заданным параметрам
+    var subm = false;
+    var d2 = document.getElementById('feeding').innerHTML;
+    var hay = 0;
+    var oats = 0;
+    if (HayToGive === -1)
+    {
+        hay = hayToGive(); 
+    }
+    else
+    {
+        hay = HayToGive;
+    }
+    if (OatsToGive === -1)
+    {
+        oats = oatsToGive();
+    }
+    else
+    {
+        oats = OatsToGive;
+    }
+
+    if (hay + oats === 0) return;
+    if (d2.indexOf('недостаточный') !== -1) 
+    {
+        hay = 20-hayGiven();
+        oats = 15-oatsGiven();
+    }
+    // Для слайдеров
+    if (d2.indexOf('haySlider') !== -1)
+    {               
+        // Выставляем сено
+        var spans=document.getElementById('haySlider').getElementsByTagName('li');
+        var i = hay;
+        spans[i].className = spans[i].className + " selected";      
+        spans[i].click();
+
+        var hidden=document.getElementById('haySlider-sliderHidden');
+        hidden.setAttribute("value",i);
+        subm=true;
+    }
+    // Выставляем зерно, если оно есть
+    if (d2.indexOf('oatsSlider') !== -1)
+    {
+        var spans=document.getElementById('oatsSlider').getElementsByTagName('li');
+        var i =oats;
+        spans[i].className = spans[i].className + " selected";
+        spans[i].click();        
+
+        var hidden=document.getElementById('oatsSlider-sliderHidden');
+        hidden.setAttribute("value",i);
+        subm=true;
+    }
+    if (subm === false)
+    {
+        // Для выпадающих списков
+        if (d2.indexOf('id="feedingHay"') !== -1)
+        {
+            document.getElementById('feedingHay').options[hay].selected = true;
+        }
+        if (d2.indexOf('id="feedingOats"') !== -1)
+        {
+            document.getElementById('feedingOats').options[oats].selected = true;
+        }
+    }
+    // Нажимаем на кнопку
+
+  var k = document.getElementById('feed-button');
+    if (k!==null)
+    {
+        k.click();
+    }
+
+}
+function doEatPre(){// Корм по заданному
+    // Если кормим молоком
+    if (document.body.innerHTML.indexOf('boutonAllaiter') !== -1)
+    {
+        var d = document.getElementById('boutonAllaiter');
+       
+            d.click();
+       
+        return;
+    }
+    var subm = false;
+    var d2 = document.getElementById('feeding').innerHTML;
+
+    var hay = hayToGive();      
+    var oats = oatsToGive();
+    //alert('hay' + hay);
+    //alert('oats' + oats);
+    if (hay + oats === 0) return;
+    if (d2.indexOf('толст') !== -1) return;
+    if (d2.indexOf('недостаточный') !== -1) 
+    {
+        hay = 20-hayGiven();
+        oats = 15-oatsGiven();
+    }
+    // Для слайдеров
+    if (d2.indexOf('haySlider') !== -1)
+    {               
+        // Выставляем сено
+        var spans=document.getElementById('haySlider').getElementsByTagName('li');
+        var i = hay;
+        spans[i].className = spans[i].className + " selected";      
+        spans[i].click();
+
+        var hidden=document.getElementById('haySlider-sliderHidden');
+        hidden.setAttribute("value",i);
+        subm=true;
+    }
+
+    // Выставляем зерно, если оно есть
+    if (d2.indexOf('oatsSlider') !== -1)
+    {
+        var spans=document.getElementById('oatsSlider').getElementsByTagName('li');
+        var i =oats;
+        spans[i].className = spans[i].className + " selected";
+        spans[i].click();        
+
+        var hidden=document.getElementById('oatsSlider-sliderHidden');
+        hidden.setAttribute("value",i);
+        subm=true;
+    }
+    if (subm === false)
+    {
+        // Для выпадающих списков
+        if (d2.indexOf('id="feedingHay"') !== -1)
+        {
+            document.getElementById('feedingHay').options[hay].selected = true;
+        }
+        if (d2.indexOf('id="feedingOats"') !== -1)
+        {
+            document.getElementById('feedingOats').options[oats].selected = true;
+        }
+    }  
+}
+function doEatNorm(){// Корм по норме
+    // Если кормим молоком
+    if (document.body.innerHTML.indexOf('boutonAllaiter') !== -1)
+    {
+        var d = document.getElementById('boutonAllaiter');
+           d.click();
+        return;
+       
+    }
+    var subm = false;
+    var d2 = document.getElementById('feeding').innerHTML;
+
+    var hay = hayToGive();      
+    var oats = oatsToGive();
+    //alert('hay' + hay);
+    //alert('oats' + oats);
+    if (hay + oats === 0) return;
+    if (d2.indexOf('толст') !== -1) return;
+    if (d2.indexOf('недостаточный') !== -1) 
+    {
+        hay = 20-hayGiven();
+        oats = 15-oatsGiven();
+    }
+    // Для слайдеров
+    if (d2.indexOf('haySlider') !== -1)
+    {               
+        // Выставляем сено
+        var spans=document.getElementById('haySlider').getElementsByTagName('li');        
+        var i = hay;
+        spans[i].className = spans[i].className + " selected";      
+        spans[i].click();
+
+        var hidden=document.getElementById('haySlider-sliderHidden');
+        hidden.setAttribute("value",i);
+        subm=true;
+    }
+    // Выставляем зерно, если оно есть
+    if (d2.indexOf('oatsSlider') !== -1)
+    {
+        var spans=document.getElementById('oatsSlider').getElementsByTagName('li');
+        var i =oats;
+        spans[i].className = spans[i].className + " selected";
+        spans[i].click();        
+
+        var hidden=document.getElementById('oatsSlider-sliderHidden');
+        hidden.setAttribute("value",i);
+        subm=true;
+    }
+    if (subm === false)
+    {
+        // Для выпадающих списков
+        if (d2.indexOf('id="feedingHay"') !== -1)
+        {
+            document.getElementById('feedingHay').options[hay].selected = true;
+        }
+        if (d2.indexOf('id="feedingOats"') !== -1)
+        {
+            document.getElementById('feedingOats').options[oats].selected = true;
+        }
+    }
+    // Нажимаем на кнопку
+
+    var k = document.getElementById('feed-button');
+    if (k!==null)
+    {
+        k.click();
+    }
+
+}
+function hayToGive(){// Вычисление необходимой нормы сена
+    // Дано сена
+    var hay_to_give = (hayNorm()*1-hayGiven()*1);
+    // Не меньше нуля
+    if (hay_to_give<0) hay_to_give = 0;
+    // Не больше 10 кг
+    if (hay_to_give>20) hay_to_give = 20;
+    // Норма сена
+    return hay_to_give;
+}
+function oatsToGive(){// Вычисление необходимой нормы зерна
+    if (document.getElementById('feeding').outerHTML.indexOf('oats') !== -1||document.getElementById('feeding').outerHTML.indexOf('Oats') !== -1)
+    {
+        var oats_to_give = (oatsNorm()*1-oatsGiven()*1);
+        // Не меньше нуля
+        if (oats_to_give<0) oats_to_give = 0;
+        // Не больше 15 кг
+        if (oats_to_give>15) oats_to_give = 15;
+        // Норма сена
+        return oats_to_give;
+    }
+    else return 0;
+}
+function hayNorm(){// Норма сена
+    var hay_norm=document.getElementsByClassName('section-fourrage section-fourrage-target')[0].childNodes[0].nodeValue;
+    return hay_norm;
+}
+function hayGiven(){// Съедено сена
+    var d2 = document.getElementsByClassName('float-right section-fourrage section-fourrage-quantity')[0].outerHTML;
+    var hay_given=d2.substring(d2.indexOf('/ <strong class')-3,d2.lastIndexOf('/ <strong class'));
+    return hay_given;
+}
+function oatsNorm(){// Норма зерна
+    var hay_norm=document.getElementsByClassName('section-avoine section-avoine-target')[0].childNodes[0].nodeValue;
+    return hay_norm;
+}
+function oatsGiven(){// Съедено зерна
+    var d2 = document.getElementsByClassName('float-right section-avoine section-avoine-quantity')[0].outerHTML;
+    var oats_given=d2.substring(d2.indexOf('/ <strong class')-3,d2.lastIndexOf('/ <strong class'));
+    return oats_given;
+}
+//------- Корм -------
+
+//------- Остальные действия -------
+function reload(){
+    location.reload();
+}
+function groom(){
+    var d = document.getElementById('boutonPanser');
+    if(d!== null)
+    {
+        d.click();
+    }
+}
+function sleep(){
+    var d = document.getElementById('boutonCoucher');
+    if(d!== null)
+    {
+        d.click();
+    }
+}
+function stroke(){
+    var d = document.getElementById('boutonCaresser');
+    if(d!== null)
+    {
+        d.click();
+    }
+}
+function carrot(){
+    var d = document.getElementById('boutonCarotte');
+    if(d!== null)
+    {
+        d.click();
+    }
+}
+function drink(){
+    var d = document.getElementById('boutonBoire');
+    if(d!== null)
+    {
+        d.click();
+    }
+}
+function mash(){
+    var d = document.getElementById('boutonMash');
+    if(d!== null)
+    {
+        d.click();
+    }
+}
+function prev(){
+    var d = document.getElementById('nav-previous');
+    if(d!== null&&d.hasAttribute("href"))
+    {
+        d.click();
+    }
+}
+function OR(){
+       var d=document.getElementById('age');
+    var c=d.getElementsByTagName('button');
+    if(c[0]!==null)
+    {
+        c[0].click();
+    }
+}
+function giveName(){// Дать имя и аффикс
+    var pause = 0; 
+    // Чистка
+    var pause1 = pause + getRandomPause(shortPause1,shortPause2);
+    setTimeout(function(){
+        document.getElementById('widget--1').click();
+    },pause1); 
+    var pause2 = pause1 + getRandomPause(shortPause1/4,shortPause2/4);
+    setTimeout(function(){
+        document.getElementsByClassName('options-menu')[0].getElementsByClassName('first')[0].getElementsByTagName('a')[2].click();
+    },pause2); 
+    var pause3 = pause2 + getRandomPause(shortPause1,shortPause2);
+    setTimeout(function(){
+        var d =document.getElementById('horseNameName');
+        var s = ("" + getMyParameterByName(genetics[0])).split(".");
+          var nn;
+        if (chevalSexe === 'masculin')
+       {
+           nn=polM;
+        }
+        else
+        {
+           nn= polJ;
+        }
+        d.value = nn + " " +(enduranceGenetique + vitesseGenetique + dressageGenetique + galopGenetique + trotGenetique + sautGenetique).toFixed(2);
+    },pause3); 
+    var pause4 = pause3 + getRandomPause(shortPause1/4,shortPause2/4);
+    setTimeout(function (){
+        var d = document.getElementById('horseNameAffixe').getElementsByTagName('optgroup')[1].getElementsByTagName('option')[0];
+        d.setAttribute('selected','selected');
+    },pause4); 
+    var pause5 = pause4 + getRandomPause(shortPause1,shortPause2);
+    setTimeout(function(){
+        document.getElementById('profil-popup-content').getElementsByClassName('spacer-small-top button button-style-0')[0].click();
+    },pause5); 
+}
+//------- Остальные действия -------
+
+//------- Вспомогательные функции -------
+function createCookie (name, value) {
+    document.cookie = name + "=" + value + ";expires: 800 ";
+} 
+function readCookie (name) {
+    var value = "; " + document.cookie,
+        parts = value.split("; " + name + "=");
+    if (parts.length === 2) {
+        return parts.pop().split(";").shift();
+    }
+} 
+function eraseCookie (name) {
+    createCookie(name, ";expires: -1");
+}
+function getGlobalParameterByName(a){
+    return window[a];
+}
+function getMyParameterByName(x) {
+    var res = "";
+    try{
+        res = eval(x);
+    } catch(e) {}
+    return res;
+}
+function pauseFunc(){// пауза
+    if (document.body.innerHTML.indexOf('chevalId') !== -1)
+    {
+        return;
+    }
+}
+function trim(str, chars){ 
+    return ltrim(rtrim(str, chars), chars); 
+} 
+function ltrim(str, chars){ 
+    chars = chars || "\\s"; 
+    return str.replace(new RegExp("^[" + chars + "] + ", "g"), ""); 
+} 
+function rtrim(str, chars){ 
+    chars = chars || "\\s"; 
+    return str.replace(new RegExp("[" + chars + "] + $", "g"), ""); 
+}
+function getRandomPause(min, max){
+    var rand = Math.random() * (max - min) + min;
+    return rand;
+}
+function openFeeding(){ 
+    if (document.body.innerHTML.indexOf('boutonAllaiter') === -1)
+    {      
+        var d = document.getElementById('boutonNourrir');
+        d.click();
+    }
+}
+//------- Вспомогательные функции -------
+
+//------- Запись в КСК из резерва -------
+function eqCenterReg(){
+    if (document.body.innerHTML.indexOf('cheval-inscription') !== -1)
+    {
+       
+        var d=document.getElementById('cheval-inscription').firstChild;
+        if (d!==null)
+        {
+            d.click();
+        }
+    }
+}
+if (/www.lowadi.com\/elevage\/chevaux\/centreInscription\?id=/.test(window.location.href)){
+   
+     viborksk();
+}
+function kskreserv(){
+ var pause=0;
+    pause=pause+getRandomPause(2200,2600);
+    setTimeout(eqCenterReg2,pause);
+   
+    var pause1=pause+getRandomPause(2800,3200);
+    setTimeout(eqCenterReg3,pause1);
+  
+    var pause2=pause1+getRandomPause(3500,3800);
+    setTimeout(eqCenterReg4,pause2);
+}
+function eqCenterReg2(){
+    var d1 = document.getElementById('tab-box-reserve').getElementsByTagName('a');
+    console.log(d1[0]);
+    d1[0].click();}
+function eqCenterReg3(){
+    var dom = (document.getElementById('boxContent').getElementsByTagName('tbody'))[0].getElementsByTagName('tr');
+    for(var  i = 1; i <dom.length ;i++) //(var i = dom.length - 1; i >= 0; i--) 
+    {
+        localisation = ((dom[i].getElementsByClassName('align-left width-19'))[0]).getElementsByTagName('a')[0].className;
+        if( localisation === 'centerLocalisation ' + centerLocalisation){
+            var text = (dom[i].getElementsByClassName('align-center')[0]).outerHTML;
+            var s = text.search('abreuvoir');
+            if(s>0){
+                text = text.substring(s);
+                s = text.search('douche');
+                if(s>0){
+                    var buttons0 = (dom[i].getElementsByClassName('align-center align-middle spacer-small-left spacer-small-right')[dl]).getElementsByTagName('button'); ////0-на 1 день ,1-на3               
+                    for (var j = 0; j < buttons0.length; j++) {
+                        var d1=(dom[i].getElementsByClassName('align-center align-middle spacer-small-left spacer-small-right')[dl]).getElementsByClassName('disabled button button-style-8');
+                   if (d1[0] === undefined)
+                     {
+                        
+                            buttons0[j].click();
+                            return;
+                          } 
+
+                    }
+              
+                }
+            }
+
+        }
+    }
+}
+function eqCenterReg4(){
+    
+    if (/message=centreOk/.test(window.location.href)!==true)
+    {
+        location.reload();
+    }
+}
+function ksk_ALL(){
+   var pause=0;
+    
+    pause=pause+getRandomPause(2000,2500);
+    setTimeout(ksk_0,pause);
+    var pause1=pause+getRandomPause(2000,2800);
+    setTimeout(ksk_1,pause1);
+    var pause2=pause1+getRandomPause(2200,2800);
+    setTimeout(ksk_2,pause2);
+  //   var pause3=pause2+getRandomPause(2500,2800);
+   // setTimeout(eqCenterReg4,pause3);
+}
+function ksk_0(){
+   document.getElementById('abreuvoir').setAttribute('value','1');//поилка
+   document.getElementById('douche').setAttribute('value','1'); //душ
+   document.getElementById(spec).setAttribute('value','1'); //спеца
+    
+    var d=document.getElementsByClassName('module module-style-20 module-css').nextElementSibling;
+    d[0].click();
+  
+}
+function ksk_1(){
+    // Сортировка
+    var c = document.getElementsByClassName('grid-cell spacer-small-top spacer-small-bottom');
+    var d = c[dl ].getElementsByTagName('a');
+    var pause1=getRandomPause(1000,1300);
+    d[0].click();
+}
+function ksk_2(){
+    // Запись в первый
+    var c = document.getElementsByClassName('odd highlight');
+    var d = c[0].getElementsByTagName('button');
+    var e = d[dl];
+    window.oldConfirm = window.confirm;
+    window.confirm = (function (){return true;});
+    e.click();
+    window.confirm = window.oldConfirm;
+}
