@@ -181,7 +181,8 @@ if (is_lic()==true) {
                 {
                   if(chevalSexe == getLastParentSex())
                 {
-                     zeus();
+                    // zeus();
+			console.log('Zeus');
                         
                     }   
                  else  if(chevalNom.indexOf(".") == -1){
