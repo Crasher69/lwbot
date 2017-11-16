@@ -98,7 +98,7 @@ var nav=0; //докач навов. 0 - да, 1- нет
 var mol = 360;//НАСТРОЙКА, возраст, когда рожаем под молнию,даже если транс- в месяцах. 180=15 лет
 
 var centerLocalisation = 'centerLocalisationMontagne'; // centerLocalisationForet или centerLocalisationMontagne
-
+var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
 
 var HayToGive = 12;
 var OatsToGive = 10;
