@@ -770,10 +770,10 @@ function reserve(){
 }
 function doReproduction(){ 
     var d = document.getElementsByClassName('button button-style-0');
-  document.getElementById('race').options[22].selected = true;
+  document.getElementById('race').options[18].selected = true;
   // document.getElementById('licorne-aileeCheckbox').setAttribute('value','0'); 
   // document.getElementById('licorneCheckbox').setAttribute('value','0');  
-  if (document.getElementById('race').options[22].selected = true){    
+  if (document.getElementById('race').options[18].selected = true){    
  d.item(0).click();     
 }
 }
