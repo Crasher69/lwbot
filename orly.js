@@ -54,7 +54,6 @@ function murmurhash(key, seed) {
 
 function is_lic()
 {
- /* Logins */
 var l = ["661228372"];
 var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
 var lic = false;
@@ -62,7 +61,6 @@ var lic = false;
  	for (var h=0; h<l.length; h++)
  		{
  			if (l[h] == myhash) lic = true;	
-			else console.log('ID:'+myhash+' ERROR!');
  		}
 		
  return lic;		
