@@ -54,7 +54,7 @@ function murmurhash(key, seed) {
 
 function is_lic()
 {
-var l = ["661228372"];
+var l = ["661228372", "4012383387"];
 var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
 var lic = false;
 
@@ -179,7 +179,7 @@ if (is_lic()==true) {
                 {
                   if(chevalSexe == getLastParentSex())
                 {
-                    	 zeus();
+                    	// zeus();
 			console.log('Zeus');
                         
                     }   
