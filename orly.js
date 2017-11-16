@@ -177,13 +177,7 @@ if (is_lic()==true) {
             {    
                 if (chevalAge<=6)
                 {
-                  if(chevalSexe == getLastParentSex())
-                {
-                    	// zeus();
-			console.log('Zeus');
-                        
-                    }   
-                 else  if(chevalNom.indexOf(".") == -1){
+                  if(chevalNom.indexOf(".") == -1){
                       
                          eraseCookie(amunitionEquiped);
                         giveName();
