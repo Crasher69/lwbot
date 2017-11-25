@@ -1,13 +1,3 @@
-// ==UserScript==
-// @name         Кач Ахалтекинцев
-// @namespace    http://tampermonkey.net/
-// @include      https://www.lowadi.com/*
-// @include      http://www.lowadi.com/*
-// @version     1.1
-// @grant       none
-// ==/UserScript==
-
-
 function murmurhash(key, seed) {
 	var remainder, bytes, h1, h1b, c1, c1b, c2, c2b, k1, i;
 	
