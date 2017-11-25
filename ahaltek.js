@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Ахалтекинская Кач
+// @name         Кач Ахалтекинцев
 // @namespace    http://tampermonkey.net/
 // @include      https://www.lowadi.com/*
 // @include      http://www.lowadi.com/*
