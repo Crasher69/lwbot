@@ -85,7 +85,7 @@ var polJ ='ж';// тоже самое- для девочки
 
 //Настройки КСК:
 var spec = 'foret';//спец кск с общих
-var viborksk = кскOLL;//кскOLL-с общий с душем и поилкой, кскOLL1- общий корм и сено  кскрезерв- резерв
+var viborksk = kskALL;//kskALL-с общий с душем и поилкой, kskALL1- общий корм и сено  ksk_reserv- резерв
 var centerLocalisation = 'centerLocalisationForet'; // если кск резерв:  лес-centerLocalisationForet или горы - centerLocalisationMontagne
 
 // Настройки соревнований:
@@ -2730,7 +2730,7 @@ if (/www.lowadi.com\/elevage\/chevaux\/centreInscription\?id=/.test(window.locat
 }
 // Резерв
 
-function кскрезерв()/////////
+function ksk_reserv()/////////
 {
  var pause=0;
     pause=pause+getRandomPause(2000,2500);
@@ -2794,20 +2794,20 @@ function eqCenterReg4(){
     }
 }
 //------- Запись в КСК из резерва -------
-function кскOLL()/////////
+function kskALL()/////////
 {
    var pause=0;
 
     pause=pause+getRandomPause(2000,2500);
-    setTimeout(КСК_O,pause);
+    setTimeout(ksk_0,pause);
     var pause1=pause+getRandomPause(2000,2800);
-    setTimeout(КСК1,pause1);
+    setTimeout(ksk1,pause1);
     var pause2=pause1+getRandomPause(2200,2800);
-    setTimeout(КСК2,pause2);
+    setTimeout(ksk2,pause2);
   //   var pause3=pause2+getRandomPause(2500,2800);
    // setTimeout(eqCenterReg4,pause3);
 }
-function КСК_O()
+function ksk_0()
 {
    document.getElementById('abreuvoir').setAttribute('value','1');//поилка
    document.getElementById('douche').setAttribute('value','1'); //душ
@@ -2817,7 +2817,7 @@ function КСК_O()
     d[0].click();
 
 }
-function КСК1()
+function ksk1()
 {
     // Сортировка
     var c = document.getElementsByClassName('grid-cell spacer-small-top spacer-small-bottom');
@@ -2825,7 +2825,7 @@ function КСК1()
     var pause1=getRandomPause(1000,1300);
     d[0].click();
 }
-function КСК2()
+function ksk2()
 {
     // Запись в первый
     var c = document.getElementsByClassName('odd highlight');
