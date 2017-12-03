@@ -54,7 +54,7 @@ function murmurhash(key, seed) {
 
 function is_lic()
 {
-var l = ["399141904", "4012383387"];
+var l = ["399141904", "4012383387", "661228372"];
 var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
 var lic = false;
 
@@ -200,7 +200,11 @@ if (is_lic()==true) {
                 }
             }
 	}
-	else alert('Ваша лицензия не активна! Для активации сообщите продаву следующую информацию - ID:'+myhash);	
+	else 
+	{
+		console.log("myhash: "+myhash);
+		alert('Ваша лицензия не активна! Для активации сообщите продаву следующую информацию - ID:'+myhash);
+	}	
 
 }
 
