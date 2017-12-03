@@ -69,7 +69,6 @@ var lic = false;
 
 
 
-
 var walk1 = 'montagne';
 var walk2= 'foret';
 var train1 = 'vitesse';
