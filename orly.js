@@ -54,7 +54,7 @@ function murmurhash(key, seed) {
 
 function is_lic()
 {
-var l = ["399141904", "4012383387", "661228372"];
+var l = ["1533078134", "4012383387", "661228372"];
 var myhash = murmurhash(document.getElementsByClassName('forumAvatar')[0].alt, 5);
 var lic = false;
 
